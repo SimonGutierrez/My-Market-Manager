@@ -14,10 +14,6 @@ export class SignUp extends Component {
       password: '',
       firstName: '',
       lastName: '',
-      gender: 'Male',
-      company: 'N/A',
-      accessToken: '',
-      accessTokenError: false,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -127,73 +123,6 @@ export class SignUp extends Component {
                 required
                 pattern="[A-Za-z]{2,32}"
                 title="May only contain uppercase and lowercase letters only, and at least 2 characters in total"
-                onChange={this.handleChange}
-              />
-            </div>
-
-            <div className="input-field col s12">
-              <label htmlFor="gender">
-                Gender<span className="red-text-color">*</span>
-              </label>
-
-              <br />
-              <br />
-
-              <select
-                id="gender"
-                className="browser-default"
-                required
-                onChange={this.handleChange}
-              >
-                <option value="" disabled>
-                  --Please choose an option--
-                </option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="Non-binary">Non-binary</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
-
-            <div className="input-field col s12">
-              <label htmlFor="company">
-                Company<span className="red-text-color">*</span>
-              </label>
-
-              <br />
-              <br />
-
-              <select
-                id="company"
-                className="browser-default"
-                required
-                onChange={this.handleChange}
-              >
-                <option value="" disabled>
-                  --Please choose an option--
-                </option>
-                <option value="N/A">N/A</option>
-                <option value="Apple">Apple</option>
-                <option value="Facebook">Facebook</option>
-                <option value="Google">Google</option>
-                <option value="GitHub">GitHub</option>
-                <option value="Microsoft">Microsoft</option>
-                <option value="Twitter">Twitter</option>
-                <option value="Yahoo">Yahoo</option>
-              </select>
-            </div>
-
-            <div className="input-field">
-              <label htmlFor="accessToken">
-                Access Token<span className="red-text-color">*</span> (Must
-                match the access token you received via email invitation)
-              </label>
-              <input
-                type="text"
-                id="accessToken"
-                required
-                title="Must
-                match the access token you received via email invitation"
                 onChange={this.handleChange}
               />
             </div>
