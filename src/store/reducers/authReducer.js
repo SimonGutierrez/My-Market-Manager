@@ -57,6 +57,7 @@ export const signUpThunkCreator = newUser => {
         email: newUser.email,
         firstName: newUser.firstName,
         lastName: newUser.lastName,
+        balance: `$ 5000 USD`,
       };
 
       // console.log('newUserObj: ', newUserObj);

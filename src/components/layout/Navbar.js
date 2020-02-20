@@ -53,11 +53,7 @@ class Navbar extends Component {
         <nav className="nav-wrapper grey darken-3">
           <div>
             <NavLink to="/" className="left brand-logo name-text-positioning">
-              {largeViewCheck ? (
-                <span className="bold-text-style">My Market Manager</span>
-              ) : (
-                <span className="bold-text-style">Bplater</span>
-              )}
+                <span className="bold-text-style">My Market Manager</span>  
             </NavLink>
 
             {curLinks}
