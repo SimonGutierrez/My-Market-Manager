@@ -9,11 +9,7 @@ const SignedInLinks = ({ profile, signOutThunk }) => {
     <ul className="right">
       <li>
         <NavLink to="/">
-          {profile.firstName ? (
-            <span>Hello, {profile.firstName}.</span>
-          ) : (
-            <span>Hello.</span>
-          )}
+        <span className="bold-text-style">Home</span>
         </NavLink>
       </li>
       <li>

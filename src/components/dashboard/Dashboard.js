@@ -9,8 +9,7 @@ import Notifications from './Notifications';
 
 class Dashboard extends Component {
   render() {
-    const { auth, notifications } = this.props;
-    console.log("store>>>>>", this.store)
+    const { auth, notifications, profile } = this.props;
     if (!auth.uid) {
       return <Redirect to="/signin" />;
     } else {
@@ -18,7 +17,7 @@ class Dashboard extends Component {
         <div className="dashboard container">
           <div className="row">
             <div className="col s12 m6">
-              <PlaceholderMessage />
+              <PlaceholderMessage profile={profile} />
             </div>
 
             <div className="col s12 m5 offset-m1">
@@ -34,6 +33,7 @@ class Dashboard extends Component {
 const mapStateToProps = state => ({
   auth: state.firebase.auth,
   notifications: state.firestore.ordered.notifications,
+  profile: state.firebase.profile,
 });
 
 export default compose(
