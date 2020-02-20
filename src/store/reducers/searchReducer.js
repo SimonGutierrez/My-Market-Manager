@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { apiToken } from '../../secrets';
 
 // Initial State
 const initialState = {
@@ -21,12 +22,12 @@ const initialState = {
   });
   
   // Thunk Creators
-  export const searchThunkCreator = newUser => {
+  export const searchThunkCreator = (ticker) => {
     return async (dispatch) => {
       try {
-        const stock = await axios.get('https://cloud.iexapis.com/stable/stock/aapl/quote?token=pk_93e194ee2d534b2aa5ca92f44f3e50e5');
+        const { data } = await axios.get(`https://cloud.iexapis.com/stable/stock/${ticker}/quote?token=${apiToken}`);
   
-        dispatch(searchSuccessActionCreator(stock));
+        dispatch(searchSuccessActionCreator(data));
       } catch (error) {
         console.error(error);
         dispatch(searchErrorActionCreator(error));
@@ -39,11 +40,9 @@ const initialState = {
   const SearchReducer = (state = initialState, action) => {
     switch (action.type) {
       case SEARCH_SUCCESS:
-        console.log('Signed up successfully');
         return { ...state, searchResults: action.stock };
   
       case SEARCH_ERROR:
-        console.log('Sign up error!', action.error.message);
         return { ...state, searchResults: action.error.message };
   
       default:
