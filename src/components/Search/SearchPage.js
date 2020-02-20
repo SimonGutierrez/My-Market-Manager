@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PlaceholderPage = props => {
+const SearchPage = props => {
   return (
     <div className="dashboard container">
       <div className="row">
@@ -9,12 +9,12 @@ const PlaceholderPage = props => {
             <div className="card z-depth-0">
               <div className="card-content grey-text text-darken-3">
                 <span className="card-title">
-                  <span className="bold-text-style">Placeholder</span>
+                  <span className="bold-text-style">Search</span>
                 </span>
 
                 <ul className="placeholder">
                   <li>
-                    <span>This is a placeholder page.</span>
+                    <span>This is the Search page.</span>
                   </li>
                 </ul>
               </div>
@@ -26,4 +26,4 @@ const PlaceholderPage = props => {
   );
 };
 
-export default PlaceholderPage;
+export default SearchPage;

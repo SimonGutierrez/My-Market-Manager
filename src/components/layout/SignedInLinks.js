@@ -13,8 +13,8 @@ const SignedInLinks = ({ profile, signOutThunk }) => {
         </NavLink>
       </li>
       <li>
-        <NavLink to="/placeholder">
-          <span className="bold-text-style">Placeholder</span>
+        <NavLink to="/search">
+          <span className="bold-text-style">Search</span>
         </NavLink>
       </li>
       <li>

@@ -39,17 +39,13 @@ class SignedInLinksBurger extends Component {
           <div className="remove-outline">
             <div>
               <NavLink onClick={() => this.closeMenu()} to="/">
-                {this.props.profile.firstName ? (
-                  <span>Hello, {this.props.profile.firstName}.</span>
-                ) : (
-                  <span>Hello.</span>
-                )}
+              <span className="bold-text-style">Home</span>
               </NavLink>
             </div>
 
             <div>
-              <NavLink onClick={() => this.closeMenu()} to="/placeholder">
-                <span className="bold-text-style">Placeholder</span>
+              <NavLink onClick={() => this.closeMenu()} to="/search">
+                <span className="bold-text-style">Search</span>
               </NavLink>
             </div>
 

@@ -1,17 +1,19 @@
 import React from 'react';
 
-const PlaceholderMessage = props => {
+const WelcomeMessage = ({profile}) => {
+  const {firstName, balance} = profile;
+  
   return (
     <div className="section">
       <div className="card z-depth-0">
         <div className="card-content grey-text text-darken-3">
           <span className="card-title">
-            <span className="bold-text-style">Welcome {props.profile.firstName}!</span>
+            <span className="bold-text-style">Welcome {firstName}!</span>
           </span>
 
           <ul className="placeholder">
             <li>
-              <span>Your current balance is: {props.profile.balance} </span>
+              <span>Your current balance is: {balance} </span>
             </li>
           </ul>
         </div>
@@ -20,4 +22,4 @@ const PlaceholderMessage = props => {
   );
 };
 
-export default PlaceholderMessage;
+export default WelcomeMessage;
