@@ -10,7 +10,6 @@ import Notifications from './Notifications';
 class Dashboard extends Component {
   render() {
     const { auth, notifications } = this.props;
-
     if (!auth.uid) {
       return <Redirect to="/signin" />;
     } else {

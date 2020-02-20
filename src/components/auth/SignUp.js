@@ -3,7 +3,6 @@ import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { signUpThunkCreator } from '../../store/reducers/authReducer';
-import signupAccessToken from '../../config/signupConfig';
 
 export class SignUp extends Component {
   constructor() {
@@ -34,21 +33,12 @@ export class SignUp extends Component {
     // console.log('event.target.value: ', event.target.value);
 
     event.preventDefault();
-
-    if (this.state.accessToken === signupAccessToken) {
-      this.setState({
-        accessTokenError: false,
-      });
-      this.props.signUpThunk(this.state);
-    } else {
-      this.setState({
-        accessTokenError: true,
-      });
-    }
+    this.props.signUpThunk(this.state);
+ 
   }
 
   render() {
-    const { auth, authError } = this.props;
+    const { auth } = this.props;
 
     if (auth.uid) {
       return <Redirect to="/" />;
@@ -129,13 +119,6 @@ export class SignUp extends Component {
 
             <button className="btn blue lighten-1 z-depth-0">Sign Up</button>
 
-            <div className="red-text center">
-              {authError ? (
-                <p>{authError}</p>
-              ) : this.state.accessTokenError ? (
-                'Invalid Access Token! Please try again.'
-              ) : null}
-            </div>
           </form>
         </div>
       );

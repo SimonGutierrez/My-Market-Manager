@@ -29,7 +29,7 @@ export class SignIn extends Component {
   }
 
   render() {
-    const { auth, authError } = this.props;
+    const { auth } = this.props;
 
     if (auth.uid) {
       return <Redirect to="/" />;
@@ -70,10 +70,7 @@ export class SignIn extends Component {
             <div className="input-field">
               <button className="btn blue lighten-1 z-depth-0">Sign In</button>
             </div>
-
-            <div className="red-text center">
-              {authError ? <p>{authError}</p> : null}
-            </div>
+            
           </form>
         </div>
       );
