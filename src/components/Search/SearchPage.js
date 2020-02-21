@@ -9,7 +9,6 @@ class SearchPage extends Component {
 
     this.state = {
       ticker: '',
-      amount: 1,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -24,10 +23,9 @@ class SearchPage extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    // this.props.searchThunk(this.state.ticker);
+    this.props.searchThunk(this.state.ticker);
     this.setState({
       ticker: '',
-      amount: 1,
     })
   }
 
@@ -57,20 +55,6 @@ class SearchPage extends Component {
                     onChange={this.handleChange}
                   />
                 </div>
-
-                <div className="input-field">
-                  <label htmlFor="amount">
-                    Number of Stock<span className="red-text-color">*</span>
-                  </label>
-
-                  <input
-                    type="number"
-                    id="amount"
-                    value={this.state.amount}
-                    min="1"
-                    onChange={this.handleChange}
-                  />
-                </div>
               </div>
               
               <div className="input-field">
@@ -80,7 +64,7 @@ class SearchPage extends Component {
           </div>
 
           <div className="col s12 m5 offset-m1">
-              <SingleStock searchResults={searchResults} amount={this.state.amount} />
+              <SingleStock searchResults={searchResults}/>
             </div>
         </div>
       </div>
