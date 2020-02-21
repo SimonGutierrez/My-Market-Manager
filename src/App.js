@@ -5,7 +5,7 @@ import Navbar from './components/layout/Navbar';
 import Dashboard from './components/dashboard/Dashboard';
 import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
-import SearchPage from './components/Search/SearchPage';
+import SearchPage from './components/search/SearchPage';
 
 class App extends Component {
   render() {

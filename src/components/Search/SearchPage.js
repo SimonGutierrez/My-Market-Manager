@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { searchThunkCreator } from '../../store/reducers/searchReducer';
+import SingleStock from '../stock-view/Single-Stock';
 
 class SearchPage extends Component {
   constructor() {
@@ -8,6 +9,7 @@ class SearchPage extends Component {
 
     this.state = {
       ticker: '',
+      amount: 1,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -22,42 +24,64 @@ class SearchPage extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.props.searchThunk(this.state.ticker);
+    // this.props.searchThunk(this.state.ticker);
+    this.setState({
+      ticker: '',
+      amount: 1,
+    })
   }
 
   render () {
-    console.log('searchResults>>>>:', this.props.stock);
+    const { foundStock } = this.props;
+    const { searchResults } = foundStock;
+
     return (
       <div className="dashboard container">
-        <div className="row">
-          <div className="col s12 m12">
-            <div className="section">
-              <div className="card z-depth-0">
-                <form onSubmit={this.handleSubmit} className="card white">
-                  <div className="card-content grey-text text-darken-3">
-                    <span className="card-title">
-                      <span className="bold-text-style">Search</span>
-                    </span>
+        <div className="column">
+          <div className="col s12 m6">
+            <form onSubmit={this.handleSubmit} className="card white">
+              <div className="card-content grey-text text-darken-3">
+                <span className="card-title">
+                  <span className="bold-text-style">Find Your Company</span>
+                </span>
 
-                    <div className="input-field">
-                      <label htmlFor="ticker">
-                        Ticker<span className="red-text-color">*</span>
-                      </label>
+                <div className="input-field">
+                  <label htmlFor="ticker">
+                    Ticker<span className="red-text-color">*</span>
+                  </label>
 
-                      <input
-                        type="text"
-                        id='ticker'
-                        onChange={this.handleChange}
-                      />
-                    </div>
-                  </div>
-                  <div className="input-field">
-                    <button className="btn blue lighten-1 z-depth-0">Sign In</button>
-                  </div>
-                </form>
+                  <input
+                    type="text"
+                    id='ticker'
+                    value={this.state.ticker}
+                    onChange={this.handleChange}
+                  />
+                </div>
+
+                <div className="input-field">
+                  <label htmlFor="amount">
+                    Number of Stock<span className="red-text-color">*</span>
+                  </label>
+
+                  <input
+                    type="number"
+                    id="amount"
+                    value={this.state.amount}
+                    min="1"
+                    onChange={this.handleChange}
+                  />
+                </div>
               </div>
-            </div>
+              
+              <div className="input-field">
+                <button className="btn blue lighten-1 z-depth-0">Search</button>
+              </div>
+            </form>
           </div>
+
+          <div className="col s12 m5 offset-m1">
+              <SingleStock searchResults={searchResults} amount={this.state.amount} />
+            </div>
         </div>
       </div>
     );
@@ -65,7 +89,7 @@ class SearchPage extends Component {
 };
 
 const mapStateToProps = state => ({
-  stock: state.search,
+  foundStock: state.search,
 });
 
 const mapDispatchToProps = dispatch => ({
