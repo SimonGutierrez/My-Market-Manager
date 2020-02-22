@@ -70,7 +70,10 @@ class SingleStock extends Component {
                             onClick={
                                 () => {
                                     this.props.buyStock(stockBought, auth.uid) 
-                                    console.log("second function!!!")
+                                    this.props.clearSearch()
+                                    this.setState({
+                                        amount: 1
+                                    })
                             }}
                             >
                                 Buy
