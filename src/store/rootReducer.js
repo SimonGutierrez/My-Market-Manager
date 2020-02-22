@@ -4,12 +4,14 @@ import { firestoreReducer } from 'redux-firestore';
 
 import authReducer from './reducers/authReducer';
 import searchReducer from './reducers/searchReducer';
+import stockReducer from './reducers/stockReducer';
 
 const rootReducer = combineReducers({
   firebase: firebaseReducer,
   firestore: firestoreReducer,
   auth: authReducer,
-  search: searchReducer
+  search: searchReducer,
+  stock: stockReducer,
 });
 
 export default rootReducer;

@@ -13,7 +13,7 @@ const WelcomeMessage = ({profile}) => {
 
           <ul className="placeholder">
             <li>
-              <span>Your current balance is: {balance} </span>
+              <span>Your current balance is: ${balance} </span>
             </li>
           </ul>
         </div>

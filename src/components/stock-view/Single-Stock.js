@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { clearSearchThunkCreator } from '../../store/reducers/searchReducer';
+import { buyStockThunkCreator } from '../..//store/reducers/stockReducer';
 import { connect } from 'react-redux';
 
 class SingleStock extends Component {
@@ -20,10 +21,17 @@ class SingleStock extends Component {
       }
 
     render() {
-        const {searchResults} = this.props;
-        // const stock = {};
+        const {searchResults, auth} = this.props;
         const currentPrice = Number.parseFloat(searchResults.latestPrice).toFixed(2);
-        console.log(searchResults)
+        let totalPrice = Number.parseFloat(this.state.amount * currentPrice).toFixed(2);
+
+        let stockBought = {
+            symbol: searchResults.symbol,
+            companyName: searchResults.companyName,
+            buyPrice: searchResults.latestPrice,
+            numOfSharesBought: this.state.amount,
+            total: totalPrice,
+        }
 
         return (
             <div className="section">
@@ -60,7 +68,7 @@ class SingleStock extends Component {
                             <button 
                             className="btn blue lighten-1 z-depth-0"
                             onClick={
-                                () => {this.props.clearSearch();
+                                () => {this.props.buyStock(stockBought, auth.uid);
                             }}
                             >
                                 Buy
@@ -74,12 +82,15 @@ class SingleStock extends Component {
 }
 
 const mapStateToProps = state => ({
-    
+    auth: state.firebase.auth,
   });
   
   const mapDispatchToProps = dispatch => ({
     clearSearch() {
       dispatch(clearSearchThunkCreator());
+    },
+    buyStock(stock, userId) {
+        dispatch(buyStockThunkCreator(stock, userId));
     },
   });
   
