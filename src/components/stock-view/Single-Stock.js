@@ -68,7 +68,9 @@ class SingleStock extends Component {
                             <button 
                             className="btn blue lighten-1 z-depth-0"
                             onClick={
-                                () => {this.props.buyStock(stockBought, auth.uid);
+                                () => {
+                                    this.props.buyStock(stockBought, auth.uid) 
+                                    console.log("second function!!!")
                             }}
                             >
                                 Buy
