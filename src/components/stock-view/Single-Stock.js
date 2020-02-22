@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { clearSearchThunkCreator } from '../../store/reducers/searchReducer';
+import { connect } from 'react-redux';
 
 class SingleStock extends Component {
     constructor() {
@@ -18,9 +20,8 @@ class SingleStock extends Component {
       }
 
     render() {
-        // amount needs to be changeable in this component.
         const {searchResults} = this.props;
-        const stock = {};
+        // const stock = {};
         const currentPrice = Number.parseFloat(searchResults.latestPrice).toFixed(2);
         console.log(searchResults)
 
@@ -59,7 +60,7 @@ class SingleStock extends Component {
                             <button 
                             className="btn blue lighten-1 z-depth-0"
                             onClick={
-                                () => {this.props.buyStock(this.state.amount, stock)
+                                () => {this.props.clearSearch();
                             }}
                             >
                                 Buy
@@ -72,4 +73,17 @@ class SingleStock extends Component {
     };
 }
 
-export default SingleStock;
+const mapStateToProps = state => ({
+    
+  });
+  
+  const mapDispatchToProps = dispatch => ({
+    clearSearch() {
+      dispatch(clearSearchThunkCreator());
+    },
+  });
+  
+  export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(SingleStock);

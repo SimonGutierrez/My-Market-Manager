@@ -9,6 +9,7 @@ const initialState = {
   // Action
   const SEARCH_SUCCESS = 'SEARCH_SUCCESS';
   const SEARCH_ERROR = 'SEARCH_ERROR';
+  const CLEAR_SEARCH ='CLEAR_SEARCH';
   
   // Action Creators
   const searchSuccessActionCreator = stock => ({
@@ -20,6 +21,10 @@ const initialState = {
     type: SEARCH_ERROR,
     error,
   });
+
+  const clearSearchActionCreator = () => ({
+      type: CLEAR_SEARCH,
+  })
   
   // Thunk Creators
   export const searchThunkCreator = (ticker) => {
@@ -35,16 +40,27 @@ const initialState = {
     };
   };
 
+  export const clearSearchThunkCreator = () => {
+    return async (dispatch) => {
+      try {
+        dispatch(clearSearchActionCreator());
+      } catch (error) {
+        console.error(error);
+        dispatch(searchErrorActionCreator(error));
+      }
+    };
+  };
+
   
   // Reducer
   const SearchReducer = (state = initialState, action) => {
     switch (action.type) {
       case SEARCH_SUCCESS:
         return { ...state, searchResults: action.stock };
-  
+      case CLEAR_SEARCH:
+        return { ...state, searchResults: {} };
       case SEARCH_ERROR:
-        return { ...state, searchResults: action.error.message };
-  
+        return { ...state, searchResults: action.error.message };   
       default:
         return state;
     }
