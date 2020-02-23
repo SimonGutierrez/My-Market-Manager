@@ -25,10 +25,10 @@ const initialState = {
     return async (dispatch) => {
       try {
         // first make an instance of our database (fireStore)
+        const date = Date.now();
         const fireStore = getFirestore();
         const total = stock.total;
         const decrement = fireStore.FieldValue.increment(-total);
-        const date = Date.now();
         // using that instance make a call to update the database with the desired data
         const currUsersProfile = await fireStore
                                         .collection('users')
@@ -44,6 +44,16 @@ const initialState = {
             .collection('date')
             .doc(date.toString())
             .set(stock);
+
+        stock.type = 'Buy';
+        stock.date = date;
+
+        await fireStore
+          .collection('users')
+          .doc(userId)
+          .collection('transactions')
+          .doc(stock.date.toString())
+          .set(stock)
     
         dispatch(buyStockSuccessActionCreator(stock));
       } catch (error) {

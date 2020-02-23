@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { searchThunkCreator } from '../../store/reducers/searchReducer';
-import SingleStock from '../stock-view/Single-Stock';
+import BuyStock from '../stocks/BuyStock';
 
 class SearchPage extends Component {
   constructor() {
@@ -64,7 +64,7 @@ class SearchPage extends Component {
           </div>
 
           <div className="col s12 m5 offset-m1">
-              <SingleStock searchResults={searchResults}/>
+              <BuyStock searchResults={searchResults}/>
             </div>
         </div>
       </div>

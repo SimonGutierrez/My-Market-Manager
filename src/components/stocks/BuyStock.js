@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { clearSearchThunkCreator } from '../../store/reducers/searchReducer';
-import { buyStockThunkCreator } from '../..//store/reducers/stockReducer';
+import { buyStockThunkCreator } from '../../store/reducers/stockReducer';
 import { connect } from 'react-redux';
 
-class SingleStock extends Component {
+class BuyStock extends Component {
     constructor() {
         super()
 
@@ -26,8 +26,8 @@ class SingleStock extends Component {
         let totalPrice = Number.parseFloat(this.state.amount * currentPrice).toFixed(2);
 
         let stockBought = {
-            symbol: searchResults.symbol,
             companyName: searchResults.companyName,
+            symbol: searchResults.symbol,
             buyPrice: searchResults.latestPrice,
             numOfSharesBought: this.state.amount,
             total: totalPrice,
@@ -90,7 +90,7 @@ const mapStateToProps = state => ({
     auth: state.firebase.auth,
   });
   
-  const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = dispatch => ({
     clearSearch() {
       dispatch(clearSearchThunkCreator());
     },
@@ -102,4 +102,4 @@ const mapStateToProps = state => ({
   export default connect(
     mapStateToProps,
     mapDispatchToProps
-  )(SingleStock);
+  )(BuyStock);

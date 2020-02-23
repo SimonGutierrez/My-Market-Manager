@@ -6,6 +6,7 @@ import Dashboard from './components/dashboard/Dashboard';
 import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
 import SearchPage from './components/search/SearchPage';
+import TransactionsPage from './components/transactions/TransactionsPage';
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
             <Route path="/signin" component={SignIn} />
             <Route path="/signup" component={SignUp} />
             <Route path="/search" component={SearchPage} />
+            <Route path="/transactions" component={TransactionsPage} />
           </Switch>
         </div>
       </BrowserRouter>
