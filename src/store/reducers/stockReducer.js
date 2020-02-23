@@ -25,7 +25,6 @@ const initialState = {
     return async (dispatch) => {
       try {
         // first make an instance of our database (fireStore)
-        const date = Date.now();
         const fireStore = getFirestore();
         const total = stock.total;
         const decrement = fireStore.FieldValue.increment(-total);
@@ -42,11 +41,10 @@ const initialState = {
             .collection('portfolio')
             .doc(stock.symbol)
             .collection('date')
-            .doc(date.toString())
+            .doc(stock.date.toString())
             .set(stock);
 
         stock.type = 'Buy';
-        stock.date = date;
 
         await fireStore
           .collection('users')

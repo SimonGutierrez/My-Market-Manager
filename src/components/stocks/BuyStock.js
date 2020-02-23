@@ -24,6 +24,7 @@ class BuyStock extends Component {
         const {searchResults, auth} = this.props;
         const currentPrice = Number.parseFloat(searchResults.latestPrice).toFixed(2);
         let totalPrice = Number.parseFloat(this.state.amount * currentPrice).toFixed(2);
+        const date = Date();
 
         let stockBought = {
             companyName: searchResults.companyName,
@@ -31,6 +32,7 @@ class BuyStock extends Component {
             buyPrice: searchResults.latestPrice,
             numOfSharesBought: this.state.amount,
             total: totalPrice,
+            date: date.toString(),
         }
 
         return (

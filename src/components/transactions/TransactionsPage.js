@@ -54,10 +54,9 @@ class TransactionsPage extends Component {
         total, 
         type, 
          } = stock 
-      let convertedDate = Date(date);
       return (
          <tr key={date}>
-            <td >{convertedDate.toString()}</td>
+            <td >{date}</td>
             <td>{companyName}</td>
             <td>{symbol}</td>
             <td>${buyPrice}</td>
