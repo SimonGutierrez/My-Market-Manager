@@ -41,6 +41,7 @@ const initialState = {
             const docData = doc.data();
             const { data } = await axios.get(`https://cloud.iexapis.com/stable/stock/${doc.id}/quote?token=${apiToken}`);
   
+            let currentValue = docData.totalShares * data.latestPrice;
 
             usersPortfolio.push({
                 companyName: data.companyName,
@@ -48,6 +49,7 @@ const initialState = {
                 totalNumOfShares: docData.totalShares,
                 currentPrice: data.latestPrice,
                 openingPrice: data.open,
+                currentValue,
             })
         }
 

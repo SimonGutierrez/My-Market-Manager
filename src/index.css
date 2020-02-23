@@ -97,6 +97,14 @@ textarea.materialize-textarea:focus:not([readonly]) {
   color: #ef5350;
 }
 
+.green-text-color {
+  color: #008000;
+}
+
+.grey-text-color {
+  color: #808080;
+}
+
 .remove-outline {
   outline: none;
 }

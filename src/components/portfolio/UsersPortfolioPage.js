@@ -3,28 +3,6 @@ import { connect } from 'react-redux';
 import { getPortfolioThunkCreator } from '../../store/reducers/portfolioReducer';
 
 class UsersPortfolioPage extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-        dummyData : [
-            {
-                companyName: 'apple',
-                symbol: 'aapl',
-                totalNumOfShares: 5,
-                currentPrice: 500,
-                openingPrice: 400,
-            },
-            {
-                companyName: 'microsoft',
-                symbol: 'msft',
-                totalNumOfShares: 10,
-                currentPrice: 100,
-                openingPrice: 300,
-            },
-        ]
-    };
-  }
 
   componentDidMount() {
     this.props.getPortfolio(this.props.auth.uid);
@@ -37,15 +15,28 @@ class UsersPortfolioPage extends Component {
         symbol, 
         totalNumOfShares, 
         currentPrice, 
-        openingPrice, 
+        openingPrice,
+        currentValue, 
          } = stock 
+
+        let performance;
+
+        if (openingPrice > currentPrice) {
+            performance = 'red-text-color';
+        } else if (openingPrice < currentPrice) {
+            performance = 'green-text-color';
+        } else {
+            performance = 'grey-text-color';
+        }
+
       return (
          <tr key={index}>
             <td>{companyName}</td>
-            <td>{symbol}</td>
+            <td className = {performance}>{symbol}</td>
             <td>{totalNumOfShares}</td>
             <td>${currentPrice}</td>
             <td>${openingPrice}</td>
+            <td className = {performance}>${currentValue}</td>
          </tr>
       )
     })
