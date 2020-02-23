@@ -25,7 +25,7 @@ class BuyStock extends Component {
         const currentPrice = Number.parseFloat(searchResults.latestPrice).toFixed(2);
         let totalPrice = Number.parseFloat(this.state.amount * currentPrice).toFixed(2);
         const date = Date();
-
+        
         let stockBought = {
             companyName: searchResults.companyName,
             symbol: searchResults.symbol,
@@ -34,7 +34,8 @@ class BuyStock extends Component {
             total: totalPrice,
             date: date.toString(),
         }
-
+        const currBalance = this.props.profile.balance - totalPrice;
+        
         return (
             <div className="section">
                 <div className="card z-depth-0">
@@ -71,7 +72,7 @@ class BuyStock extends Component {
                             className="btn blue lighten-1 z-depth-0"
                             onClick={
                                 () => {
-                                    this.props.buyStock(stockBought, auth.uid) 
+                                    currBalance >= 0 ? this.props.buyStock(stockBought, auth.uid) : window.alert('Not enough funds!')
                                     this.props.clearSearch()
                                     this.setState({
                                         amount: 1
@@ -90,6 +91,7 @@ class BuyStock extends Component {
 
 const mapStateToProps = state => ({
     auth: state.firebase.auth,
+    profile: state.firebase.profile,
   });
   
 const mapDispatchToProps = dispatch => ({

@@ -7,6 +7,7 @@ import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
 import SearchPage from './components/search/SearchPage';
 import TransactionsPage from './components/transactions/TransactionsPage';
+import UsersPortfolioPage from './components/portfolio/UsersPortfolioPage';
 
 class App extends Component {
   render() {
@@ -21,6 +22,7 @@ class App extends Component {
             <Route path="/signup" component={SignUp} />
             <Route path="/search" component={SearchPage} />
             <Route path="/transactions" component={TransactionsPage} />
+            <Route path="/portfolio" component={UsersPortfolioPage} />
           </Switch>
         </div>
       </BrowserRouter>

@@ -18,6 +18,11 @@ const SignedInLinks = ({ profile, signOutThunk }) => {
         </NavLink>
       </li>
       <li>
+        <NavLink to="/portfolio">
+          <span className="bold-text-style">Portfolio</span>
+        </NavLink>
+      </li>
+      <li>
         <NavLink to="/transactions">
           <span className="bold-text-style">Transactions</span>
         </NavLink>

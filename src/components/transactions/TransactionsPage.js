@@ -3,41 +3,6 @@ import { connect } from 'react-redux';
 import { getTransactionsThunkCreator } from '../../store/reducers/transactionsReducer';
 
 class TransactionsPage extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      dummyData: [
-        {
-        date: '1582411571207',
-        companyName: 'apple',
-        symbol: 'AAPL',
-        buyPrice: 20,
-        numOfSharesBought: 5,
-        total: 100,
-        type: 'Buy',
-        },
-        {
-          symbol: 'AAPL',
-          companyName: 'apple',
-          buyPrice: 20,
-          numOfSharesBought: 5,
-          total: 100,
-          type: 'Buy',
-          date: '1582411571207',
-          },
-          {
-            symbol: 'AAPL',
-            companyName: 'apple',
-            buyPrice: 20,
-            numOfSharesBought: 5,
-            total: 100,
-            type: 'Buy',
-            date: '1582411571207',
-            },
-      ],
-    };
-  }
 
   componentDidMount() {
     this.props.getTransactions(this.props.auth.uid)
@@ -76,7 +41,6 @@ class TransactionsPage extends Component {
  }
     
     render () {
-      console.log("transactions>>>:", this.props.transactions)
       return (
         <div className="section">
           <div className="card z-depth-0">

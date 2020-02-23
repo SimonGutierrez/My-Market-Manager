@@ -50,6 +50,18 @@ class SignedInLinksBurger extends Component {
             </div>
 
             <div>
+              <NavLink onClick={() => this.closeMenu()} to="/portfolio">
+                <span className="bold-text-style">Portfolio</span>
+              </NavLink>
+            </div>
+
+            <div>
+              <NavLink onClick={() => this.closeMenu()} to="/transactions">
+                <span className="bold-text-style">Transactions</span>
+              </NavLink>
+            </div>
+
+            <div>
               <NavLink
                 onClick={() => {
                   this.closeMenu();
