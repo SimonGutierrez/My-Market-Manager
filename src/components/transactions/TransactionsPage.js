@@ -41,6 +41,7 @@ class TransactionsPage extends Component {
  }
     
     render () {
+      console.log("transactions", this.props.transactions)
       return (
         <div className="section">
           <div className="card z-depth-0">

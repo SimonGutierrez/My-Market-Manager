@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-// import { getTransactionsThunkCreator } from '../../store/reducers/transactionsReducer';
+import { getPortfolioThunkCreator } from '../../store/reducers/portfolioReducer';
 
 class UsersPortfolioPage extends Component {
   constructor() {
@@ -11,14 +11,14 @@ class UsersPortfolioPage extends Component {
             {
                 companyName: 'apple',
                 symbol: 'aapl',
-                numOfSharesBought: 5,
+                totalNumOfShares: 5,
                 currentPrice: 500,
                 openingPrice: 400,
             },
             {
                 companyName: 'microsoft',
                 symbol: 'msft',
-                numOfSharesBought: 10,
+                totalNumOfShares: 10,
                 currentPrice: 100,
                 openingPrice: 300,
             },
@@ -27,15 +27,15 @@ class UsersPortfolioPage extends Component {
   }
 
   componentDidMount() {
-    // this.props.getTransactions(this.props.auth.uid)
+    this.props.getPortfolio(this.props.auth.uid);
   }
 
   renderTableData() {
-    return this.state.dummyData.map((stock, index) => {
+    return this.props.usersPortfolio.map((stock, index) => {
       const { 
         companyName, 
         symbol, 
-        numOfSharesBought, 
+        totalNumOfShares, 
         currentPrice, 
         openingPrice, 
          } = stock 
@@ -43,7 +43,7 @@ class UsersPortfolioPage extends Component {
          <tr key={index}>
             <td>{companyName}</td>
             <td>{symbol}</td>
-            <td>{numOfSharesBought}</td>
+            <td>{totalNumOfShares}</td>
             <td>${currentPrice}</td>
             <td>${openingPrice}</td>
          </tr>
@@ -52,13 +52,14 @@ class UsersPortfolioPage extends Component {
   }
 
   renderTableHeader() {
-    let header = Object.keys(this.state.dummyData[0])
+    let header = Object.keys(this.props.usersPortfolio[0])
     return header.map((key, index) => {
        return <th key={index}>{key.toUpperCase()}</th>
     })
  }
     
     render () {
+        console.log("usersPortfolio?>>>>>:", this.props.usersPortfolio)
       return (
         <div className="section">
           <div className="card z-depth-0">
@@ -66,14 +67,15 @@ class UsersPortfolioPage extends Component {
               <h1 className='title'>My Portfolio</h1>
               <table className='transactions'>
                 <tbody>
-                  { this.state.dummyData.length ?
+                  { 
+                    this.props.usersPortfolio.length ?
                     <tr>{this.renderTableHeader()}</tr> : 
                     <tr>
                       <th>No Stock Owned Yet</th>
                       </tr>
                   }
                   {
-                    this.state.dummyData.length ?
+                    this.props.usersPortfolio.length ?
                     this.renderTableData() :
                     <tr>
                       <td>Buy some Stock!</td>
@@ -89,14 +91,14 @@ class UsersPortfolioPage extends Component {
   }
   
 const mapStateToProps = state => ({
-    // auth: state.firebase.auth,
-    // transactions: state.transactions,
+    auth: state.firebase.auth,
+    usersPortfolio: state.portfolio,
   });
   
 const mapDispatchToProps = dispatch => ({
-    // getTransactions(userId) {
-    //     dispatch(getTransactionsThunkCreator(userId));
-    // },
+    getPortfolio(userId) {
+        dispatch(getPortfolioThunkCreator(userId));
+    },
   });
   
   export default connect(

@@ -27,7 +27,7 @@ const initialState = {
         let usersTransactions = [];
         // first make an instance of our database (fireStore)
         const fireStore = getFirestore();
-        // using that instance make a call to update the database with/for the desired data
+        // using that instance make a call to update/get the database with the desired data
         const transactionsRef = await fireStore
                                         .collection('users')
                                         .doc(userId)

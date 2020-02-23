@@ -6,6 +6,7 @@ import authReducer from './reducers/authReducer';
 import searchReducer from './reducers/searchReducer';
 import stockReducer from './reducers/stockReducer';
 import transactionsReducer from './reducers/transactionsReducer';
+import portfolioReducer from './reducers/portfolioReducer';
 
 const rootReducer = combineReducers({
   firebase: firebaseReducer,
@@ -14,6 +15,7 @@ const rootReducer = combineReducers({
   search: searchReducer,
   stock: stockReducer,
   transactions: transactionsReducer,
+  portfolio: portfolioReducer,
 });
 
 export default rootReducer;
