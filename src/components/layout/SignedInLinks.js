@@ -14,7 +14,7 @@ const SignedInLinks = ({ profile, signOutThunk }) => {
       </li>
       <li>
         <NavLink to="/search">
-          <span className="bold-text-style">Search</span>
+          <span className="bold-text-style">Search and Buy</span>
         </NavLink>
       </li>
       <li>

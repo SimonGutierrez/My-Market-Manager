@@ -8,7 +8,15 @@ class UsersPortfolioPage extends Component {
     this.props.getPortfolio(this.props.auth.uid);
   }
 
+  findTotalValue() {
+    let totalValue = 0;
+    this.props.usersPortfolio.forEach(elem => totalValue += elem.currentValue);
+
+    return totalValue;
+  }
+
   renderTableData() {
+
     return this.props.usersPortfolio.map((stock, index) => {
       const { 
         companyName, 
@@ -18,7 +26,6 @@ class UsersPortfolioPage extends Component {
         openingPrice,
         currentValue, 
          } = stock 
-
         let performance;
 
         if (openingPrice > currentPrice) {
@@ -34,9 +41,9 @@ class UsersPortfolioPage extends Component {
             <td>{companyName}</td>
             <td className = {performance}>{symbol}</td>
             <td>{totalNumOfShares}</td>
-            <td>${currentPrice}</td>
-            <td>${openingPrice}</td>
-            <td className = {performance}>${currentValue}</td>
+            <td className = {performance}>${Number.parseFloat(currentPrice).toFixed(2)}</td>
+            <td>${Number.parseFloat(openingPrice).toFixed(2)}</td>
+            <td>${Number.parseFloat(currentValue).toFixed(2)}</td>
          </tr>
       )
     })
@@ -51,11 +58,14 @@ class UsersPortfolioPage extends Component {
     
     render () {
         console.log("usersPortfolio?>>>>>:", this.props.usersPortfolio)
+        let totalValue;
+        this.props.usersPortfolio.length ? totalValue = this.findTotalValue() : totalValue = 0;
+
       return (
         <div className="section">
           <div className="card z-depth-0">
             <div className="card-content grey-text text-darken-3">
-              <h1 className='title'>My Portfolio</h1>
+              <h1 className='title'>My Portfolio (${Number.parseFloat(totalValue).toFixed(2)})</h1>
               <table className='transactions'>
                 <tbody>
                   { 

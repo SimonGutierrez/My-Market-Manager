@@ -24,9 +24,9 @@ class TransactionsPage extends Component {
             <td >{date}</td>
             <td>{companyName}</td>
             <td>{symbol}</td>
-            <td>${buyPrice}</td>
+            <td>${Number.parseFloat(buyPrice).toFixed(2)}</td>
             <td>{numOfSharesBought}</td>
-            <td>${total}</td>
+            <td>${Number.parseFloat(total).toFixed(2)}</td>
             <td>{type}</td>
          </tr>
       )

@@ -46,6 +46,10 @@ class BuyStock extends Component {
 
                         <ul className="placeholder">
                             <li>
+                            <span className="bold-text-style" >Your Wallet: ${Number.parseFloat(this.props.profile.balance).toFixed(2)}</span>
+                            </li>
+
+                            <li>
                             <span className="bold-text-style" >Current Price: ${currentPrice}</span>
                             </li>
                             

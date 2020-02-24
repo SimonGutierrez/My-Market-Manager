@@ -13,7 +13,7 @@ const WelcomeMessage = ({profile}) => {
 
           <ul className="placeholder">
             <li>
-              <span>Your current balance is: ${Number.parseFloat(balance).toFixed(2)} </span>
+              <span>Your current balance: ${Number.parseFloat(balance).toFixed(2)} </span>
             </li>
           </ul>
         </div>

@@ -45,7 +45,7 @@ class SignedInLinksBurger extends Component {
 
             <div>
               <NavLink onClick={() => this.closeMenu()} to="/search">
-                <span className="bold-text-style">Search</span>
+                <span className="bold-text-style">Search and Buy</span>
               </NavLink>
             </div>
 
