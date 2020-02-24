@@ -73,7 +73,7 @@ class BuyStock extends Component {
                             onClick={
                                 () => {
                                     currBalance >= 0 ? this.props.buyStock(stockBought, auth.uid) : window.alert('Not enough funds!')
-                                    this.props.clearSearch()
+                                    if (currBalance >= 0) this.props.clearSearch()
                                     this.setState({
                                         amount: 1
                                     })
