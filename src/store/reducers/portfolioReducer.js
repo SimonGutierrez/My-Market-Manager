@@ -44,7 +44,7 @@ const initialState = {
             const currentStockData = await axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${doc.id}&interval=5min&apikey=${alphaApiToken}`);
 
             const stockDate = currentStockData.data["Meta Data"]["3. Last Refreshed"];
-  
+            
             let currentValue = docData.totalShares * currentStockData.data["Time Series (5min)"][stockDate]["1. open"];
 
             usersPortfolio.push({

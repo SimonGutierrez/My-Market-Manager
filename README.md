@@ -2,12 +2,6 @@
 
 - Clone the repo and `npm install` the dependencies.
 - Create a Firebase project.
-- Create a Firestore db using the following schema:
-
-```javascript
-SCHEMA PLACEHOLDER
-```
-
 - Set the Firestore db rules to the following rules:
 
 ```javascript
@@ -26,8 +20,6 @@ service cloud.firestore {
 ```
 
 - Fill in your actual keys in `src/config/`.
+- Create a secrets file to import your API key and fireStore Config info.
 - `npm run start` will run in a dev environment.
 
-### Firebase Deployment:
-
-- PLACEHOLDER

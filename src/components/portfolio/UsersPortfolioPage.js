@@ -37,7 +37,7 @@ class UsersPortfolioPage extends Component {
 
       return (
          <tr key={index}>
-            <td className = {performance}>{symbol}</td>
+            <td className = {performance}>{symbol.toUpperCase()}</td>
             <td>{shares}</td>
             <td className = {performance}>${Number.parseFloat(currentPrice).toFixed(2)}</td>
             <td>${Number.parseFloat(openingPrice).toFixed(2)}</td>
