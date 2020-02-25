@@ -1,6 +1,11 @@
 <p align="center">
-  <img src="./public/icon.gif">
+  <img src="./public/icon.gif" height=200 width=200>
 </p>
+
+# My-Market-Manager
+
+Welcome to My-Market-Manager a web app that allows users to buy stock and are visually able to see how they are doing in real time. Each user will have access to a portfolio to view stock progress and transactions for a full ledger of thier stock history. This app was made using react, redux, and firestore.
+
 
 ### Setting Up Dev Environment:
 
