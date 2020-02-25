@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { apiToken } from '../../secrets';
+import { alphaApiToken } from '../../secrets';
 
 // Initial State
 const initialState = {
@@ -30,7 +30,7 @@ const initialState = {
   export const searchThunkCreator = (ticker) => {
     return async (dispatch) => {
       try {
-        const { data } = await axios.get(`https://cloud.iexapis.com/stable/stock/${ticker}/quote?token=${apiToken}`);
+        const { data } = await axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${ticker}&interval=5min&apikey=${alphaApiToken}`);
   
         dispatch(searchSuccessActionCreator(data));
       } catch (error) {

@@ -12,20 +12,18 @@ class TransactionsPage extends Component {
     return this.props.transactions.map((stock) => {
       const { 
         date,
-        companyName, 
         symbol, 
         buyPrice, 
-        numOfSharesBought, 
+        shares, 
         total, 
         type, 
          } = stock 
       return (
          <tr key={date}>
             <td >{date}</td>
-            <td>{companyName}</td>
-            <td>{symbol}</td>
+            <td>{symbol.toUpperCase()}</td>
             <td>${Number.parseFloat(buyPrice).toFixed(2)}</td>
-            <td>{numOfSharesBought}</td>
+            <td>{shares}</td>
             <td>${Number.parseFloat(total).toFixed(2)}</td>
             <td>{type}</td>
          </tr>

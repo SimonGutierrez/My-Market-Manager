@@ -21,27 +21,30 @@ class BuyStock extends Component {
       }
 
     render() {
-        const {searchResults, auth} = this.props;
-        const currentPrice = Number.parseFloat(searchResults.latestPrice).toFixed(2);
-        let totalPrice = Number.parseFloat(this.state.amount * currentPrice).toFixed(2);
         const date = Date();
+        const {searchResults, auth} = this.props;
+        let stockBought = {};
         
-        let stockBought = {
-            companyName: searchResults.companyName,
-            symbol: searchResults.symbol,
-            buyPrice: searchResults.latestPrice,
-            numOfSharesBought: this.state.amount,
-            total: totalPrice,
-            date: date.toString(),
+        if (searchResults["Meta Data"]) {
+            const stockDate = searchResults["Meta Data"]["3. Last Refreshed"];
+            
+            stockBought = {
+                symbol: searchResults["Meta Data"]["2. Symbol"],
+                buyPrice: Number.parseFloat(Number(searchResults["Time Series (5min)"][stockDate]["1. open"])).toFixed(2),
+                numOfSharesBought: this.state.amount,
+                total: Number.parseFloat(this.state.amount * Number(searchResults["Time Series (5min)"][stockDate]["1. open"])).toFixed(2),
+                date: date.toString(),
+            }
         }
-        const currBalance = this.props.profile.balance - totalPrice;
         
+        const currBalance = this.props.profile.balance - stockBought.total;
+        console.log("stock>>>>:", stockBought)
         return (
             <div className="section">
                 <div className="card z-depth-0">
                     <div className="card-content grey-text text-darken-3">
                         <span className="card-title">
-                            <span className="bold-text-style">Company: {searchResults.companyName}({searchResults.symbol}) </span>
+                            <span className="bold-text-style">Company: {stockBought.symbol ? stockBought.symbol.toUpperCase() : 'No Company Yet'} </span>
                         </span>
 
                         <ul className="placeholder">
@@ -50,7 +53,7 @@ class BuyStock extends Component {
                             </li>
 
                             <li>
-                            <span className="bold-text-style" >Current Price: ${currentPrice}</span>
+                            <span className="bold-text-style" >Current Price: ${stockBought.buyPrice}</span>
                             </li>
                             
                             <li>
@@ -68,7 +71,7 @@ class BuyStock extends Component {
                             </li>
                             
                             <li>
-                                <span className="bold-text-style">Total: ${Number.parseFloat(this.state.amount * currentPrice).toFixed(2)}</span>
+                                <span className="bold-text-style">Total: ${stockBought.total}</span>
                             </li>
                         </ul>
                         <div className="input-field">

@@ -38,10 +38,9 @@ const initialState = {
             const data = doc.data();
             usersTransactions.push({
                 date: data.date,
-                companyName: data.companyName,
                 symbol: data.symbol,
                 buyPrice: data.buyPrice,
-                numOfSharesBought: data.numOfSharesBought,
+                shares: data.numOfSharesBought,
                 total: data.total,
                 type: data.type,
             })
