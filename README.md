@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./public/icon.gif">
+</p>
+
 ### Setting Up Dev Environment:
 
 - Clone the repo and `npm install` the dependencies.
