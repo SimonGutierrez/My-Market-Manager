@@ -1,6 +1,6 @@
 import { getFirestore } from 'redux-firestore';
 import axios from 'axios';
-import { apiToken } from '../../secrets';
+import { alphaApiToken } from '../../secrets';
 
 // Initial State
 const initialState = {
@@ -39,16 +39,19 @@ const initialState = {
         for (let i = 0; i < portfolioRef.docs.length; i++) {
             let doc = portfolioRef.docs[i];
             const docData = doc.data();
-            const { data } = await axios.get(`https://cloud.iexapis.com/stable/stock/${doc.id}/quote?token=${apiToken}`);
+            const openingStockData = await axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${doc.id}&outputsize=full&apikey=${alphaApiToken}`);
+
+            const currentStockData = await axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${doc.id}&interval=5min&apikey=${alphaApiToken}`);
+
+            const stockDate = currentStockData.data["Meta Data"]["3. Last Refreshed"];
   
-            let currentValue = docData.totalShares * data.latestPrice;
+            let currentValue = docData.totalShares * currentStockData.data["Time Series (5min)"][stockDate]["1. open"];
 
             usersPortfolio.push({
-                companyName: data.companyName,
                 symbol: doc.id,
-                totalNumOfShares: docData.totalShares,
-                currentPrice: data.latestPrice,
-                openingPrice: data.open,
+                shares: docData.totalShares,
+                currentPrice: currentStockData.data["Time Series (5min)"][stockDate]["1. open"],
+                openingPrice: openingStockData.data["Time Series (Daily)"][stockDate.split(' ')[0]]["1. open"],
                 currentValue,
             })
         }

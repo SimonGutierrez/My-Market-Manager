@@ -19,9 +19,8 @@ class UsersPortfolioPage extends Component {
 
     return this.props.usersPortfolio.map((stock, index) => {
       const { 
-        companyName, 
         symbol, 
-        totalNumOfShares, 
+        shares, 
         currentPrice, 
         openingPrice,
         currentValue, 
@@ -38,9 +37,8 @@ class UsersPortfolioPage extends Component {
 
       return (
          <tr key={index}>
-            <td>{companyName}</td>
             <td className = {performance}>{symbol}</td>
-            <td>{totalNumOfShares}</td>
+            <td>{shares}</td>
             <td className = {performance}>${Number.parseFloat(currentPrice).toFixed(2)}</td>
             <td>${Number.parseFloat(openingPrice).toFixed(2)}</td>
             <td>${Number.parseFloat(currentValue).toFixed(2)}</td>
