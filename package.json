@@ -5,6 +5,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "script/deploy",
+    "heroku-token": "script/encrypt-heroku-auth-token.js",
     "test-scripts": "react-scripts test",
     "test": "mocha --watch \"./tests/*.spec.js\" --require @babel/register",
     "eject": "react-scripts eject"
@@ -26,6 +28,7 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-firestore": "^0.8.0",
     "redux-logger": "^3.0.6",
+    "pg": "^7.4.3",
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
