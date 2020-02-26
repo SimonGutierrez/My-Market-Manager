@@ -32,4 +32,4 @@ service cloud.firestore {
 - Create a secrets file to import your API key and fireStore Config info.
 - `npm run start` will run in a dev environment.
 
-Deploy Link: (https://my-market-manager.web.app/signin)
+Deploy Link: https://my-market-manager.web.app/signin
