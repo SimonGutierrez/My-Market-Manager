@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "My-Market-Manager"
+    "default": "My-Market-Manager",
+    "yes": "my-market-manager"
   }
 }
