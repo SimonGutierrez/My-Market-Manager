@@ -3,9 +3,7 @@ import axios from 'axios';
 import { alphaApiToken } from '../../secrets';
 
 // Initial State
-const initialState = {
-    portfolio: [],
-  };
+const initialState = [];
   
   // Action
   const GET_PORTFOLIO_SUCCESS = 'GET_PORTFOLIO_SUCCESS';
@@ -37,13 +35,15 @@ const initialState = {
                                         .get();
         
         for (let i = 0; i < portfolioRef.docs.length; i++) {
-            let doc = portfolioRef.docs[i];
+            const doc = portfolioRef.docs[i];
             const docData = doc.data();
-            const openingStockData = await axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${doc.id}&outputsize=full&apikey=${alphaApiToken}`);
 
-            const currentStockData = await axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${doc.id}&interval=5min&apikey=${alphaApiToken}`);
+            //you can only make a call to the API every 12 secs, 
+             const openingStockData = await axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${doc.id}&outputsize=full&apikey=${alphaApiToken}`);
 
-            const stockDate = currentStockData.data["Meta Data"]["3. Last Refreshed"];
+             const currentStockData = await axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${doc.id}&interval=5min&apikey=${alphaApiToken}`);
+
+            let stockDate = currentStockData.data["Meta Data"]["3. Last Refreshed"];
             
             let currentValue = docData.totalShares * currentStockData.data["Time Series (5min)"][stockDate]["1. open"];
 

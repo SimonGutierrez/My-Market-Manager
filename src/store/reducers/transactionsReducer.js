@@ -1,9 +1,8 @@
 import { getFirestore } from 'redux-firestore';
 
 // Initial State
-const initialState = {
-    transactions: [],
-  };
+const initialState = [];
+
   
   // Action
   const GET_TRANSACTIONS_SUCCESS = 'GET_TRANSACTIONS_SUCCESS';

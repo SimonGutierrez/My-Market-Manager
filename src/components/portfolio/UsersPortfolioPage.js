@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import { getPortfolioThunkCreator } from '../../store/reducers/portfolioReducer';
 
 class UsersPortfolioPage extends Component {
-
+ 
   componentDidMount() {
-    this.props.getPortfolio(this.props.auth.uid);
+     this.props.getPortfolio(this.props.auth.uid);
   }
 
   findTotalValue() {
@@ -24,7 +24,8 @@ class UsersPortfolioPage extends Component {
         currentPrice, 
         openingPrice,
         currentValue, 
-         } = stock 
+         } = stock;
+
         let performance;
 
         if (openingPrice > currentPrice) {
@@ -55,7 +56,6 @@ class UsersPortfolioPage extends Component {
  }
     
     render () {
-        console.log("usersPortfolio?>>>>>:", this.props.usersPortfolio)
         let totalValue;
         this.props.usersPortfolio.length ? totalValue = this.findTotalValue() : totalValue = 0;
 
