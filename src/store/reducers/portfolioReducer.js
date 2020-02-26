@@ -38,8 +38,8 @@ const initialState = [];
             const doc = portfolioRef.docs[i];
             const docData = doc.data();
 
-            //BUG: you can only make a call to the API every 12 secs, FIX: store time on local storage, if time on localstorage - Date.now() is greater than 12000 you can make the API call then save that data to our firestore as 'latestData', otherwise retrieve the latest data from our fireStore and render that instead.
-            
+            //BUG: you can only make a call to the API every 12 secs, FIX: store time on local storage, if time on localstorage - Date.now() is greater than 12000 you can make the API call then save that data to our firestore as 'latestData' and save the time on local storage as Date.now(), otherwise retrieve the latest data from our fireStore and render that instead.
+
              const openingStockData = await axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${doc.id}&outputsize=full&apikey=${alphaApiToken}`);
 
              const currentStockData = await axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${doc.id}&interval=5min&apikey=${alphaApiToken}`);
