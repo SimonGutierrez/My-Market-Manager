@@ -1,12 +1,16 @@
 {
-  "name": "create-react-redux-firebase-app",
+  "name": "my-market-manager",
   "version": "1.0.0",
+  "engines": {
+    "node": "10.16.2",
+    "npm": "6.9.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "deploy": "script/deploy",
     "heroku-token": "script/encrypt-heroku-auth-token.js",
-    "test-scripts": "react-scripts test",
+    "test2": "react-scripts test",
     "test": "mocha --watch \"./tests/*.spec.js\" --require @babel/register",
     "eject": "react-scripts eject"
   },
