@@ -6,6 +6,19 @@
 
 Welcome to My-Market-Manager a web app that allows users to buy stock and are visually able to see how they are doing in real time. Each user will have access to a portfolio to view stock progress and transactions for a full ledger of thier stock history. This app was made using react, redux, and firestore.
 
+## How It Works
+
+|     Search the Buy                   
+| ------------------------- |
+| ![Output sample](public/search-and-buy.gif)| 
+
+Search for stock by specifying its unique ticker, then indicate the amount of shares you would like to buy.
+
+|     Profile the Transactions                   
+| ------------------------- |
+| ![Output sample](public/profile-transactions.gif)| 
+
+After buying, the bought stock will appear in your transactions and your profile. 
 
 ### Setting Up Dev Environment:
 
