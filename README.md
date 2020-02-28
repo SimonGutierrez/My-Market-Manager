@@ -14,11 +14,11 @@ Welcome to My-Market-Manager a web app that allows users to buy stock and are vi
 
 Search for stock by specifying its unique ticker, then indicate the amount of shares you would like to buy.
 
-|     Profile the Transactions                   
+|     Portfolio the Transactions                   
 | ------------------------- |
 | ![Output sample](public/profile-transactions.gif)| 
 
-After buying, the bought stock will appear in your transactions and your profile. 
+After buying, the bought stock will appear in your portfolio and your transactions. Your stocks opening price will indicate how well your stock is doing.
 
 ### Setting Up Dev Environment:
 
