@@ -1,0 +1,65 @@
+[debug] [2020-05-09T18:12:02.790Z] ----------------------------------------------------------------------
+[debug] [2020-05-09T18:12:02.793Z] Command:       /usr/local/bin/node /usr/local/bin/firebase emulators:exec --only database npm test
+[debug] [2020-05-09T18:12:02.793Z] CLI Version:   8.2.0
+[debug] [2020-05-09T18:12:02.793Z] Platform:      darwin
+[debug] [2020-05-09T18:12:02.794Z] Node Version:  v10.16.2
+[debug] [2020-05-09T18:12:02.795Z] Time:          Sat May 09 2020 14:12:02 GMT-0400 (Eastern Daylight Time)
+[debug] [2020-05-09T18:12:02.795Z] ----------------------------------------------------------------------
+[debug] [2020-05-09T18:12:02.795Z] 
+[debug] [2020-05-09T18:12:02.811Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-09T18:12:02.811Z] > authorizing via signed-in user
+[info] i  emulators: Starting emulators: database
+[debug] [2020-05-09T18:12:02.932Z] [hub] writing locator at /var/folders/fb/h93m1hc144g9b2gpcn4p5j700000gn/T/hub-my-market-manager.json
+[info] ✔  hub: emulator hub started at http://localhost:4400
+[debug] [2020-05-09T18:12:02.948Z] Ignoring unsupported arg: projectId
+[debug] [2020-05-09T18:12:02.948Z] Ignoring unsupported arg: auto_download
+[debug] [2020-05-09T18:12:02.948Z] Ignoring unsupported arg: rules
+[debug] [2020-05-09T18:12:02.948Z] Starting database emulator with command {"binary":"java","args":["-Duser.language=en","-jar","/Users/simongutierrez/.cache/firebase/emulators/firebase-database-emulator-v4.4.1.jar","--host","localhost","--port",9000],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host"],"joinArgs":false}
+[info] i  database: database emulator logging to database-debug.log
+[debug] [2020-05-09T18:12:04.035Z] WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by io.netty.util.internal.ReflectionUtil (file:/Users/simongutierrez/.cache/firebase/emulators/firebase-database-emulator-v4.4.1.jar) to field sun.nio.ch.SelectorImpl.selectedKeys
+WARNING: Please consider reporting this to the maintainers of io.netty.util.internal.ReflectionUtil
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+
+[debug] [2020-05-09T18:12:05.300Z] 14:12:05.299 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+
+[debug] [2020-05-09T18:12:05.554Z] 14:12:05.553 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9000
+
+[info] ✔  database: database emulator started at http://localhost:9000
+[info] i  database: For testing set FIREBASE_DATABASE_EMULATOR_HOST=localhost:9000
+[info] i  Running script: npm test
+[debug] [2020-05-09T18:12:05.798Z] Running npm test with environment {"TERM_PROGRAM":"vscode","TERM":"xterm-256color","SHELL":"/bin/zsh","TMPDIR":"/var/folders/fb/h93m1hc144g9b2gpcn4p5j700000gn/T/","TERM_PROGRAM_VERSION":"1.44.2","TERM_SESSION_ID":"w0t0p0:81119575-35D1-4FB8-9CEE-7E212EBCABFE","ZSH":"/Users/simongutierrez/.oh-my-zsh","USER":"simongutierrez","COMMAND_MODE":"unix2003","SSH_AUTH_SOCK":"/private/tmp/com.apple.launchd.eW7jtOw9ez/Listeners","__CF_USER_TEXT_ENCODING":"0x1F5:0x0:0x0","PAGER":"less","LSCOLORS":"Gxfxcxdxbxegedabagacad","PATH":"/Library/Frameworks/Python.framework/Versions/3.8/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Library/Frameworks/Python.framework/Versions/3.8/bin:/Users/simongutierrez/flutter/bin:/Users/simongutierrez/flutter/.pub-cache/bin:/Users/simongutierrez/Python/bin:/Users/simongutierrez/Python/.pub-cache/bin:/Users/simongutierrez/flutter/bin:/Users/simongutierrez/flutter/.pub-cache/bin:/Users/simongutierrez/Python/bin:/Users/simongutierrez/Python/.pub-cache/bin","LaunchInstanceID":"4E8292A7-A3B2-4DB7-B201-7B8B4A851DC5","PWD":"/Users/simongutierrez/Projects/TTP-Phase II/My-Market-Manager","LANG":"en_US.UTF-8","ITERM_PROFILE":"Default","XPC_FLAGS":"0x0","XPC_SERVICE_NAME":"0","SHLVL":"3","HOME":"/Users/simongutierrez","COLORFGBG":"7;0","LC_TERMINAL_VERSION":"3.3.7","ITERM_SESSION_ID":"w0t0p0:81119575-35D1-4FB8-9CEE-7E212EBCABFE","LESS":"-R","LOGNAME":"simongutierrez","LC_TERMINAL":"iTerm2","SECURITYSESSIONID":"186aa","COLORTERM":"truecolor","APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL":"true","OLDPWD":"/Users/simongutierrez/Projects/TTP-Phase II/My-Market-Manager","_":"/usr/local/bin/firebase","IS_FIREBASE_CLI":"true","GCLOUD_PROJECT":"my-market-manager","FIREBASE_DATABASE_EMULATOR_HOST":"localhost:9000","FIREBASE_EMULATOR_HUB":"localhost:4400"}
+[debug] [2020-05-09T18:24:04.052Z] ----------------------------------------------------------------------
+[debug] [2020-05-09T18:24:04.055Z] Command:       /usr/local/bin/node /usr/local/bin/firebase emulators:exec --only database npm test
+[debug] [2020-05-09T18:24:04.055Z] CLI Version:   8.2.0
+[debug] [2020-05-09T18:24:04.055Z] Platform:      darwin
+[debug] [2020-05-09T18:24:04.055Z] Node Version:  v10.16.2
+[debug] [2020-05-09T18:24:04.057Z] Time:          Sat May 09 2020 14:24:04 GMT-0400 (Eastern Daylight Time)
+[debug] [2020-05-09T18:24:04.057Z] ----------------------------------------------------------------------
+[debug] [2020-05-09T18:24:04.057Z] 
+[debug] [2020-05-09T18:24:04.076Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-09T18:24:04.076Z] > authorizing via signed-in user
+[info] i  emulators: Starting emulators: database
+[warn] ⚠  emulators: It seems that you are running multiple instances of the emulator suite for project my-market-manager. This may result in unexpected behavior.
+[debug] [2020-05-09T18:24:04.165Z] [hub] writing locator at /var/folders/fb/h93m1hc144g9b2gpcn4p5j700000gn/T/hub-my-market-manager.json
+[info] ✔  hub: emulator hub started at http://localhost:4400
+[debug] [2020-05-09T18:24:04.209Z] Ignoring unsupported arg: projectId
+[debug] [2020-05-09T18:24:04.210Z] Ignoring unsupported arg: auto_download
+[debug] [2020-05-09T18:24:04.210Z] Ignoring unsupported arg: rules
+[debug] [2020-05-09T18:24:04.210Z] Starting database emulator with command {"binary":"java","args":["-Duser.language=en","-jar","/Users/simongutierrez/.cache/firebase/emulators/firebase-database-emulator-v4.4.1.jar","--host","localhost","--port",9000],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host"],"joinArgs":false}
+[info] i  database: database emulator logging to database-debug.log
+[debug] [2020-05-09T18:24:05.050Z] WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by io.netty.util.internal.ReflectionUtil (file:/Users/simongutierrez/.cache/firebase/emulators/firebase-database-emulator-v4.4.1.jar) to field sun.nio.ch.SelectorImpl.selectedKeys
+WARNING: Please consider reporting this to the maintainers of io.netty.util.internal.ReflectionUtil
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+
+[debug] [2020-05-09T18:24:06.049Z] 14:24:06.048 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+
+[debug] [2020-05-09T18:24:06.279Z] 14:24:06.279 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9000
+
+[info] ✔  database: database emulator started at http://localhost:9000
+[info] i  database: For testing set FIREBASE_DATABASE_EMULATOR_HOST=localhost:9000
+[info] i  Running script: npm test
+[debug] [2020-05-09T18:24:06.553Z] Running npm test with environment {"TERM_PROGRAM":"vscode","TERM":"xterm-256color","SHELL":"/bin/zsh","TMPDIR":"/var/folders/fb/h93m1hc144g9b2gpcn4p5j700000gn/T/","TERM_PROGRAM_VERSION":"1.44.2","TERM_SESSION_ID":"w0t0p0:81119575-35D1-4FB8-9CEE-7E212EBCABFE","ZSH":"/Users/simongutierrez/.oh-my-zsh","USER":"simongutierrez","COMMAND_MODE":"unix2003","SSH_AUTH_SOCK":"/private/tmp/com.apple.launchd.eW7jtOw9ez/Listeners","__CF_USER_TEXT_ENCODING":"0x1F5:0x0:0x0","PAGER":"less","LSCOLORS":"Gxfxcxdxbxegedabagacad","PATH":"/Library/Frameworks/Python.framework/Versions/3.8/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Library/Frameworks/Python.framework/Versions/3.8/bin:/Users/simongutierrez/flutter/bin:/Users/simongutierrez/flutter/.pub-cache/bin:/Users/simongutierrez/Python/bin:/Users/simongutierrez/Python/.pub-cache/bin:/Users/simongutierrez/flutter/bin:/Users/simongutierrez/flutter/.pub-cache/bin:/Users/simongutierrez/Python/bin:/Users/simongutierrez/Python/.pub-cache/bin","LaunchInstanceID":"4E8292A7-A3B2-4DB7-B201-7B8B4A851DC5","PWD":"/Users/simongutierrez/Projects/TTP-Phase II/My-Market-Manager","LANG":"en_US.UTF-8","ITERM_PROFILE":"Default","XPC_FLAGS":"0x0","XPC_SERVICE_NAME":"0","SHLVL":"3","HOME":"/Users/simongutierrez","COLORFGBG":"7;0","LC_TERMINAL_VERSION":"3.3.7","ITERM_SESSION_ID":"w0t0p0:81119575-35D1-4FB8-9CEE-7E212EBCABFE","LESS":"-R","LOGNAME":"simongutierrez","LC_TERMINAL":"iTerm2","SECURITYSESSIONID":"186aa","COLORTERM":"truecolor","APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL":"true","OLDPWD":"/Users/simongutierrez/Projects/TTP-Phase II/My-Market-Manager","_":"/usr/local/bin/firebase","IS_FIREBASE_CLI":"true","GCLOUD_PROJECT":"my-market-manager","FIREBASE_DATABASE_EMULATOR_HOST":"localhost:9000","FIREBASE_EMULATOR_HUB":"localhost:4400"}
