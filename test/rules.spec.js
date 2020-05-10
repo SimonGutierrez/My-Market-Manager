@@ -47,7 +47,7 @@ function adminApp() {
           name: "Alice",
           email: "alice2cool@gmail.com"
         });
-  
+
       await firebase.assertSucceeds(alice.ref("users/alice").once("value"));
       await firebase.assertFails(bob.ref("users/alice").once("value"));
       await firebase.assertFails(noone.ref("users/alice").once("value"));
