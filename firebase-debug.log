@@ -1,0 +1,361 @@
+[debug] [2020-05-11T15:41:44.864Z] ----------------------------------------------------------------------
+[debug] [2020-05-11T15:41:44.867Z] Command:       /usr/local/bin/node /usr/local/bin/firebase emulators:exec --only database, firestore
+[debug] [2020-05-11T15:41:44.868Z] CLI Version:   8.2.0
+[debug] [2020-05-11T15:41:44.868Z] Platform:      darwin
+[debug] [2020-05-11T15:41:44.868Z] Node Version:  v10.16.2
+[debug] [2020-05-11T15:41:44.869Z] Time:          Mon May 11 2020 11:41:44 GMT-0400 (Eastern Daylight Time)
+[debug] [2020-05-11T15:41:44.869Z] ----------------------------------------------------------------------
+[debug] [2020-05-11T15:41:44.869Z] 
+[debug] [2020-05-11T15:41:44.882Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-11T15:41:44.883Z] > authorizing via signed-in user
+[info] i  emulators: Starting emulators: database
+[warn] ⚠  : Not starting the  emulator, make sure you have run firebase init.
+[warn] ⚠  emulators: It seems that you are running multiple instances of the emulator suite for project my-market-manager. This may result in unexpected behavior.
+[debug] [2020-05-11T15:41:44.968Z] [hub] writing locator at /var/folders/fb/h93m1hc144g9b2gpcn4p5j700000gn/T/hub-my-market-manager.json
+[info] ✔  hub: emulator hub started at http://localhost:4400
+[debug] [2020-05-11T15:41:44.997Z] Ignoring unsupported arg: projectId
+[debug] [2020-05-11T15:41:44.998Z] Ignoring unsupported arg: auto_download
+[debug] [2020-05-11T15:41:44.998Z] Ignoring unsupported arg: rules
+[debug] [2020-05-11T15:41:44.998Z] Starting database emulator with command {"binary":"java","args":["-Duser.language=en","-jar","/Users/simongutierrez/.cache/firebase/emulators/firebase-database-emulator-v4.4.1.jar","--host","localhost","--port",9000],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host"],"joinArgs":false}
+[info] i  database: database emulator logging to database-debug.log
+[debug] [2020-05-11T15:41:46.038Z] WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by io.netty.util.internal.ReflectionUtil (file:/Users/simongutierrez/.cache/firebase/emulators/firebase-database-emulator-v4.4.1.jar) to field sun.nio.ch.SelectorImpl.selectedKeys
+WARNING: Please consider reporting this to the maintainers of io.netty.util.internal.ReflectionUtil
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+
+[debug] [2020-05-11T15:41:47.226Z] 11:41:47.224 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+
+[debug] [2020-05-11T15:41:47.444Z] 11:41:47.444 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9000
+
+[info] ✔  database: database emulator started at http://localhost:9000
+[info] i  database: For testing set FIREBASE_DATABASE_EMULATOR_HOST=localhost:9000
+[info] i  Running script: firestore
+[debug] [2020-05-11T15:41:47.581Z] Running firestore with environment {"TERM_PROGRAM":"vscode","TERM":"xterm-256color","SHELL":"/bin/zsh","TMPDIR":"/var/folders/fb/h93m1hc144g9b2gpcn4p5j700000gn/T/","TERM_PROGRAM_VERSION":"1.44.2","TERM_SESSION_ID":"w0t0p0:81119575-35D1-4FB8-9CEE-7E212EBCABFE","ZSH":"/Users/simongutierrez/.oh-my-zsh","USER":"simongutierrez","COMMAND_MODE":"unix2003","SSH_AUTH_SOCK":"/private/tmp/com.apple.launchd.eW7jtOw9ez/Listeners","__CF_USER_TEXT_ENCODING":"0x1F5:0x0:0x0","PAGER":"less","LSCOLORS":"Gxfxcxdxbxegedabagacad","PATH":"/Library/Frameworks/Python.framework/Versions/3.8/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Library/Frameworks/Python.framework/Versions/3.8/bin:/Users/simongutierrez/flutter/bin:/Users/simongutierrez/flutter/.pub-cache/bin:/Users/simongutierrez/Python/bin:/Users/simongutierrez/Python/.pub-cache/bin:/Users/simongutierrez/flutter/bin:/Users/simongutierrez/flutter/.pub-cache/bin:/Users/simongutierrez/Python/bin:/Users/simongutierrez/Python/.pub-cache/bin","LaunchInstanceID":"4E8292A7-A3B2-4DB7-B201-7B8B4A851DC5","PWD":"/Users/simongutierrez/Projects/TTP-Phase II/My-Market-Manager","LANG":"en_US.UTF-8","ITERM_PROFILE":"Default","XPC_FLAGS":"0x0","XPC_SERVICE_NAME":"0","SHLVL":"3","HOME":"/Users/simongutierrez","COLORFGBG":"7;0","LC_TERMINAL_VERSION":"3.3.7","ITERM_SESSION_ID":"w0t0p0:81119575-35D1-4FB8-9CEE-7E212EBCABFE","LESS":"-R","LOGNAME":"simongutierrez","LC_TERMINAL":"iTerm2","SECURITYSESSIONID":"186aa","COLORTERM":"truecolor","APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL":"true","OLDPWD":"/Users/simongutierrez/Projects/TTP-Phase II/My-Market-Manager","_":"/usr/local/bin/firebase","IS_FIREBASE_CLI":"true","GCLOUD_PROJECT":"my-market-manager","FIREBASE_DATABASE_EMULATOR_HOST":"localhost:9000","FIREBASE_EMULATOR_HUB":"localhost:4400"}
+[warn] ⚠  Script exited unsuccessfully (code 127)
+[info] i  emulators: Shutting down emulators.
+[info] i  hub: Stopping emulator hub
+[info] i  database: Stopping database emulator
+[debug] [2020-05-11T15:41:48.120Z] 11:41:48.120 [Thread-0] INFO com.firebase.server.forge.App$ - Attempting graceful shutdown.
+
+[debug] [2020-05-11T15:41:48.126Z] 11:41:48.126 [Thread-0] INFO com.firebase.server.forge.App$ - Graceful shutdown complete.
+
+[error] 
+[error] Error: Script "firestore" exited with code 127
+[debug] [2020-05-11T15:42:19.444Z] ----------------------------------------------------------------------
+[debug] [2020-05-11T15:42:19.446Z] Command:       /usr/local/bin/node /usr/local/bin/firebase emulators:start
+[debug] [2020-05-11T15:42:19.447Z] CLI Version:   8.2.0
+[debug] [2020-05-11T15:42:19.447Z] Platform:      darwin
+[debug] [2020-05-11T15:42:19.447Z] Node Version:  v10.16.2
+[debug] [2020-05-11T15:42:19.448Z] Time:          Mon May 11 2020 11:42:19 GMT-0400 (Eastern Daylight Time)
+[debug] [2020-05-11T15:42:19.448Z] ----------------------------------------------------------------------
+[debug] [2020-05-11T15:42:19.448Z] 
+[debug] [2020-05-11T15:42:19.458Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-11T15:42:19.458Z] > authorizing via signed-in user
+[info] i  emulators: Starting emulators: functions, firestore, database, hosting, pubsub
+[debug] [2020-05-11T15:42:19.549Z] [hub] writing locator at /var/folders/fb/h93m1hc144g9b2gpcn4p5j700000gn/T/hub-my-market-manager.json
+[info] ✔  hub: emulator hub started at http://localhost:4400
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "10"
+[info] ✔  functions: functions emulator started at http://localhost:5001
+[debug] [2020-05-11T15:42:19.580Z] Ignoring unsupported arg: projectId
+[debug] [2020-05-11T15:42:19.580Z] Ignoring unsupported arg: auto_download
+[debug] [2020-05-11T15:42:19.580Z] Starting firestore emulator with command {"binary":"java","args":["-Duser.language=en","-jar","/Users/simongutierrez/.cache/firebase/emulators/cloud-firestore-emulator-v1.11.3.jar","--host","localhost","--port",8080,"--rules","/Users/simongutierrez/Projects/TTP-Phase II/My-Market-Manager/firestore.rules","--functions_emulator","localhost:5001"],"optionalArgs":["port","webchannel_port","host","rules","functions_emulator","seed_from_export"],"joinArgs":false}
+[info] i  firestore: firestore emulator logging to firestore-debug.log
+[debug] [2020-05-11T15:42:21.078Z] API endpoint: http://
+[debug] [2020-05-11T15:42:21.078Z] localhost:8080
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=localhost:8080
+
+Dev App Server is now running.
+
+
+[info] ✔  firestore: firestore emulator started at http://localhost:8080
+[info] i  firestore: For testing set FIRESTORE_EMULATOR_HOST=localhost:8080
+[debug] [2020-05-11T15:42:21.123Z] Ignoring unsupported arg: projectId
+[debug] [2020-05-11T15:42:21.123Z] Ignoring unsupported arg: auto_download
+[debug] [2020-05-11T15:42:21.123Z] Ignoring unsupported arg: rules
+[debug] [2020-05-11T15:42:21.123Z] Starting database emulator with command {"binary":"java","args":["-Duser.language=en","-jar","/Users/simongutierrez/.cache/firebase/emulators/firebase-database-emulator-v4.4.1.jar","--host","localhost","--port",9000,"--functions_emulator_host","localhost","--functions_emulator_port",5001],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host"],"joinArgs":false}
+[info] i  database: database emulator logging to database-debug.log
+[debug] [2020-05-11T15:42:21.946Z] WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by io.netty.util.internal.ReflectionUtil (file:/Users/simongutierrez/.cache/firebase/emulators/firebase-database-emulator-v4.4.1.jar) to field sun.nio.ch.SelectorImpl.selectedKeys
+WARNING: Please consider reporting this to the maintainers of io.netty.util.internal.ReflectionUtil
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+
+[debug] [2020-05-11T15:42:22.854Z] 11:42:22.853 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+
+[debug] [2020-05-11T15:42:23.079Z] 11:42:23.078 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9000
+
+[info] ✔  database: database emulator started at http://localhost:9000
+[info] i  database: For testing set FIREBASE_DATABASE_EMULATOR_HOST=localhost:9000
+[debug] [2020-05-11T15:42:23.198Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/my-market-manager/webApps/-/config  
+ 
+[debug] [2020-05-11T15:42:23.760Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 11 May 2020 15:42:23 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting: Serving hosting files from: build
+[info] ✔  hosting: Local server: http://localhost:5000
+[info] ✔  hosting: hosting emulator started at http://localhost:5000
+[debug] [2020-05-11T15:42:24.069Z] Ignoring unsupported arg: projectId
+[debug] [2020-05-11T15:42:24.070Z] Ignoring unsupported arg: auto_download
+[debug] [2020-05-11T15:42:24.070Z] Starting pubsub emulator with command {"binary":"/Users/simongutierrez/.cache/firebase/emulators/pubsub-emulator-0.1.0/pubsub-emulator/bin/cloud-pubsub-emulator","args":["--host=localhost","--port=8085"],"optionalArgs":["port","host"],"joinArgs":true}
+[info] i  pubsub: pubsub emulator logging to pubsub-debug.log
+[debug] [2020-05-11T15:42:24.282Z] This is the Google Pub/Sub fake.
+
+[debug] [2020-05-11T15:42:24.283Z] Implementation may be incomplete or differ from the real system.
+
+[debug] [2020-05-11T15:42:24.343Z] May 11, 2020 11:42:24 AM com.google.cloud.pubsub.testing.v1.Main main
+INFO: IAM integration is disabled. IAM policy methods and ACL checks are not supported
+
+[debug] [2020-05-11T15:42:25.025Z] May 11, 2020 11:42:25 AM io.gapi.emulators.netty.NettyUtil applyJava7LongHostnameWorkaround
+INFO: Unable to apply Java 7 long hostname workaround.
+
+[debug] [2020-05-11T15:42:25.149Z] May 11, 2020 11:42:25 AM com.google.cloud.pubsub.testing.v1.Main main
+INFO: Server started, listening on 8085
+
+[info] ✔  pubsub: pubsub emulator started at http://localhost:8085
+[info] i  functions: Watching "/Users/simongutierrez/Projects/TTP-Phase II/My-Market-Manager/functions" for Cloud Functions...
+[debug] [2020-05-11T15:42:25.373Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-05-11T15:42:25.374Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
+[debug] [2020-05-11T15:42:25.374Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-05-11T15:42:25.375Z] [worker-~diagnostic~-60c18ec8-0e87-4b30-901d-1c9b65527ba4]: Assigning socketPath: /var/folders/fb/h93m1hc144g9b2gpcn4p5j700000gn/T/fire_emu_22580.sock 
+[debug] [2020-05-11T15:42:25.375Z] [worker-~diagnostic~-60c18ec8-0e87-4b30-901d-1c9b65527ba4]: BUSY 
+[debug] [2020-05-11T15:42:25.562Z] May 11, 2020 11:42:25 AM io.gapi.emulators.grpc.GrpcServer$3 operationComplete
+INFO: Adding handler(s) to newly registered Channel.
+
+[debug] [2020-05-11T15:42:25.849Z] [runtime-status] [22580] Functions runtime initialized. {"cwd":"/Users/simongutierrez/Projects/TTP-Phase II/My-Market-Manager/functions","node_version":"10.16.2"} 
+[debug] [2020-05-11T15:42:25.851Z] [runtime-status] [22580] Disabled runtime features: undefined 
+[debug] [2020-05-11T15:42:25.856Z] [runtime-status] [22580] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.2.0","resolution":"/Users/simongutierrez/Projects/TTP-Phase II/My-Market-Manager/functions/node_modules/firebase-admin/lib/index.js"} 
+[warn] ⚠  The Cloud Functions emulator requires the module "firebase-admin" to be version >8.9.0 so your version is too old. You can probably fix this by running "npm install firebase-admin@latest" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2020-05-11T15:42:25.877Z] [worker-~diagnostic~-60c18ec8-0e87-4b30-901d-1c9b65527ba4]: exited 
+[debug] [2020-05-11T15:42:25.877Z] [worker-~diagnostic~-60c18ec8-0e87-4b30-901d-1c9b65527ba4]: FINISHED 
+[debug] [2020-05-11T15:42:46.405Z] May 11, 2020 11:42:46 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+
+[debug] [2020-05-11T15:42:48.254Z] May 11, 2020 11:42:48 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+
+[debug] [2020-05-11T15:42:48.280Z] May 11, 2020 11:42:48 AM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T15:42:48.300Z] May 11, 2020 11:42:48 AM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T15:45:48.023Z] ----------------------------------------------------------------------
+[debug] [2020-05-11T15:45:48.026Z] Command:       /usr/local/bin/node /usr/local/bin/firebase emulators:start
+[debug] [2020-05-11T15:45:48.026Z] CLI Version:   8.2.0
+[debug] [2020-05-11T15:45:48.026Z] Platform:      darwin
+[debug] [2020-05-11T15:45:48.026Z] Node Version:  v10.16.2
+[debug] [2020-05-11T15:45:48.028Z] Time:          Mon May 11 2020 11:45:48 GMT-0400 (Eastern Daylight Time)
+[debug] [2020-05-11T15:45:48.028Z] ----------------------------------------------------------------------
+[debug] [2020-05-11T15:45:48.028Z] 
+[debug] [2020-05-11T15:45:48.037Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-11T15:45:48.038Z] > authorizing via signed-in user
+[info] i  emulators: Starting emulators: functions, firestore, database, hosting, pubsub
+[warn] ⚠  emulators: It seems that you are running multiple instances of the emulator suite for project my-market-manager. This may result in unexpected behavior.
+[debug] [2020-05-11T15:45:48.120Z] [hub] writing locator at /var/folders/fb/h93m1hc144g9b2gpcn4p5j700000gn/T/hub-my-market-manager.json
+[info] ✔  hub: emulator hub started at http://localhost:4400
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "10"
+[info] ✔  functions: functions emulator started at http://localhost:5001
+[debug] [2020-05-11T15:45:48.521Z] Ignoring unsupported arg: projectId
+[debug] [2020-05-11T15:45:48.522Z] Ignoring unsupported arg: auto_download
+[debug] [2020-05-11T15:45:48.522Z] Starting firestore emulator with command {"binary":"java","args":["-Duser.language=en","-jar","/Users/simongutierrez/.cache/firebase/emulators/cloud-firestore-emulator-v1.11.3.jar","--host","localhost","--port",8080,"--rules","/Users/simongutierrez/Projects/TTP-Phase II/My-Market-Manager/firestore.rules","--functions_emulator","localhost:5001"],"optionalArgs":["port","webchannel_port","host","rules","functions_emulator","seed_from_export"],"joinArgs":false}
+[info] i  firestore: firestore emulator logging to firestore-debug.log
+[debug] [2020-05-11T15:45:50.034Z] API endpoint: http://
+[debug] [2020-05-11T15:45:50.035Z] localhost:8080
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=localhost:8080
+
+Dev App Server is now running.
+
+
+[info] ✔  firestore: firestore emulator started at http://localhost:8080
+[info] i  firestore: For testing set FIRESTORE_EMULATOR_HOST=localhost:8080
+[debug] [2020-05-11T15:45:50.072Z] Ignoring unsupported arg: projectId
+[debug] [2020-05-11T15:45:50.072Z] Ignoring unsupported arg: auto_download
+[debug] [2020-05-11T15:45:50.072Z] Ignoring unsupported arg: rules
+[debug] [2020-05-11T15:45:50.072Z] Starting database emulator with command {"binary":"java","args":["-Duser.language=en","-jar","/Users/simongutierrez/.cache/firebase/emulators/firebase-database-emulator-v4.4.1.jar","--host","localhost","--port",9000,"--functions_emulator_host","localhost","--functions_emulator_port",5001],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host"],"joinArgs":false}
+[info] i  database: database emulator logging to database-debug.log
+[debug] [2020-05-11T15:45:50.922Z] WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by io.netty.util.internal.ReflectionUtil (file:/Users/simongutierrez/.cache/firebase/emulators/firebase-database-emulator-v4.4.1.jar) to field sun.nio.ch.SelectorImpl.selectedKeys
+WARNING: Please consider reporting this to the maintainers of io.netty.util.internal.ReflectionUtil
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+
+[debug] [2020-05-11T15:45:51.972Z] 11:45:51.970 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+
+[debug] [2020-05-11T15:45:52.224Z] 11:45:52.224 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9000
+
+[info] ✔  database: database emulator started at http://localhost:9000
+[info] i  database: For testing set FIREBASE_DATABASE_EMULATOR_HOST=localhost:9000
+[debug] [2020-05-11T15:45:52.398Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/my-market-manager/webApps/-/config  
+ 
+[debug] [2020-05-11T15:45:52.939Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 11 May 2020 15:45:52 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting: Serving hosting files from: build
+[info] ✔  hosting: Local server: http://localhost:5000
+[info] ✔  hosting: hosting emulator started at http://localhost:5000
+[debug] [2020-05-11T15:45:53.249Z] Ignoring unsupported arg: projectId
+[debug] [2020-05-11T15:45:53.250Z] Ignoring unsupported arg: auto_download
+[debug] [2020-05-11T15:45:53.250Z] Starting pubsub emulator with command {"binary":"/Users/simongutierrez/.cache/firebase/emulators/pubsub-emulator-0.1.0/pubsub-emulator/bin/cloud-pubsub-emulator","args":["--host=localhost","--port=8085"],"optionalArgs":["port","host"],"joinArgs":true}
+[info] i  pubsub: pubsub emulator logging to pubsub-debug.log
+[debug] [2020-05-11T15:45:53.460Z] This is the Google Pub/Sub fake.
+
+[debug] [2020-05-11T15:45:53.460Z] Implementation may be incomplete or differ from the real system.
+
+[debug] [2020-05-11T15:45:53.517Z] May 11, 2020 11:45:53 AM com.google.cloud.pubsub.testing.v1.Main main
+INFO: IAM integration is disabled. IAM policy methods and ACL checks are not supported
+
+[debug] [2020-05-11T15:45:54.208Z] May 11, 2020 11:45:54 AM io.gapi.emulators.netty.NettyUtil applyJava7LongHostnameWorkaround
+INFO: Unable to apply Java 7 long hostname workaround.
+
+[debug] [2020-05-11T15:45:54.338Z] May 11, 2020 11:45:54 AM com.google.cloud.pubsub.testing.v1.Main main
+INFO: Server started, listening on 8085
+
+[info] ✔  pubsub: pubsub emulator started at http://localhost:8085
+[info] i  functions: Watching "/Users/simongutierrez/Projects/TTP-Phase II/My-Market-Manager/functions" for Cloud Functions...
+[debug] [2020-05-11T15:45:54.537Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-05-11T15:45:54.538Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
+[debug] [2020-05-11T15:45:54.538Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-05-11T15:45:54.539Z] [worker-~diagnostic~-ee92ab24-e43e-4bf7-97b9-f6f702162bf7]: Assigning socketPath: /var/folders/fb/h93m1hc144g9b2gpcn4p5j700000gn/T/fire_emu_22688.sock 
+[debug] [2020-05-11T15:45:54.539Z] [worker-~diagnostic~-ee92ab24-e43e-4bf7-97b9-f6f702162bf7]: BUSY 
+[debug] [2020-05-11T15:45:54.722Z] May 11, 2020 11:45:54 AM io.gapi.emulators.grpc.GrpcServer$3 operationComplete
+INFO: Adding handler(s) to newly registered Channel.
+
+[debug] [2020-05-11T15:45:55.044Z] [runtime-status] [22688] Functions runtime initialized. {"cwd":"/Users/simongutierrez/Projects/TTP-Phase II/My-Market-Manager/functions","node_version":"10.16.2"} 
+[debug] [2020-05-11T15:45:55.045Z] [runtime-status] [22688] Disabled runtime features: undefined 
+[debug] [2020-05-11T15:45:55.049Z] [runtime-status] [22688] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.2.0","resolution":"/Users/simongutierrez/Projects/TTP-Phase II/My-Market-Manager/functions/node_modules/firebase-admin/lib/index.js"} 
+[warn] ⚠  The Cloud Functions emulator requires the module "firebase-admin" to be version >8.9.0 so your version is too old. You can probably fix this by running "npm install firebase-admin@latest" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2020-05-11T15:45:55.070Z] [worker-~diagnostic~-ee92ab24-e43e-4bf7-97b9-f6f702162bf7]: exited 
+[debug] [2020-05-11T15:45:55.070Z] [worker-~diagnostic~-ee92ab24-e43e-4bf7-97b9-f6f702162bf7]: FINISHED 
+[debug] [2020-05-11T15:46:08.983Z] May 11, 2020 11:46:08 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+
+[debug] [2020-05-11T15:46:10.818Z] May 11, 2020 11:46:10 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+
+[debug] [2020-05-11T15:46:10.845Z] May 11, 2020 11:46:10 AM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T15:46:10.864Z] May 11, 2020 11:46:10 AM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T15:53:30.877Z] ----------------------------------------------------------------------
+[debug] [2020-05-11T15:53:30.880Z] Command:       /usr/local/bin/node /usr/local/bin/firebase emulators:start
+[debug] [2020-05-11T15:53:30.880Z] CLI Version:   8.2.0
+[debug] [2020-05-11T15:53:30.880Z] Platform:      darwin
+[debug] [2020-05-11T15:53:30.880Z] Node Version:  v10.16.2
+[debug] [2020-05-11T15:53:30.887Z] Time:          Mon May 11 2020 11:53:30 GMT-0400 (Eastern Daylight Time)
+[debug] [2020-05-11T15:53:30.887Z] ----------------------------------------------------------------------
+[debug] [2020-05-11T15:53:30.887Z] 
+[debug] [2020-05-11T15:53:30.907Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-11T15:53:30.908Z] > authorizing via signed-in user
+[info] i  emulators: Starting emulators: functions, firestore, database, hosting, pubsub
+[warn] ⚠  emulators: It seems that you are running multiple instances of the emulator suite for project my-market-manager. This may result in unexpected behavior.
+[debug] [2020-05-11T15:53:31.003Z] [hub] writing locator at /var/folders/fb/h93m1hc144g9b2gpcn4p5j700000gn/T/hub-my-market-manager.json
+[info] ✔  hub: emulator hub started at http://localhost:4400
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "10"
+[info] ✔  functions: functions emulator started at http://localhost:5001
+[debug] [2020-05-11T15:53:31.319Z] Ignoring unsupported arg: projectId
+[debug] [2020-05-11T15:53:31.319Z] Ignoring unsupported arg: auto_download
+[debug] [2020-05-11T15:53:31.319Z] Starting firestore emulator with command {"binary":"java","args":["-Duser.language=en","-jar","/Users/simongutierrez/.cache/firebase/emulators/cloud-firestore-emulator-v1.11.3.jar","--host","localhost","--port",8080,"--rules","/Users/simongutierrez/Projects/TTP-Phase II/My-Market-Manager/firestore.rules","--functions_emulator","localhost:5001"],"optionalArgs":["port","webchannel_port","host","rules","functions_emulator","seed_from_export"],"joinArgs":false}
+[info] i  firestore: firestore emulator logging to firestore-debug.log
+[debug] [2020-05-11T15:53:32.875Z] API endpoint: http://
+[debug] [2020-05-11T15:53:32.875Z] localhost:8080
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=localhost:8080
+
+Dev App Server is now running.
+
+
+[info] ✔  firestore: firestore emulator started at http://localhost:8080
+[info] i  firestore: For testing set FIRESTORE_EMULATOR_HOST=localhost:8080
+[debug] [2020-05-11T15:53:33.120Z] Ignoring unsupported arg: projectId
+[debug] [2020-05-11T15:53:33.120Z] Ignoring unsupported arg: auto_download
+[debug] [2020-05-11T15:53:33.120Z] Ignoring unsupported arg: rules
+[debug] [2020-05-11T15:53:33.120Z] Starting database emulator with command {"binary":"java","args":["-Duser.language=en","-jar","/Users/simongutierrez/.cache/firebase/emulators/firebase-database-emulator-v4.4.1.jar","--host","localhost","--port",9000,"--functions_emulator_host","localhost","--functions_emulator_port",5001],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host"],"joinArgs":false}
+[info] i  database: database emulator logging to database-debug.log
+[debug] [2020-05-11T15:53:34.043Z] WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by io.netty.util.internal.ReflectionUtil (file:/Users/simongutierrez/.cache/firebase/emulators/firebase-database-emulator-v4.4.1.jar) to field sun.nio.ch.SelectorImpl.selectedKeys
+WARNING: Please consider reporting this to the maintainers of io.netty.util.internal.ReflectionUtil
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+
+[debug] [2020-05-11T15:53:35.337Z] 11:53:35.335 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+
+[debug] [2020-05-11T15:53:35.599Z] 11:53:35.599 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9000
+
+[info] ✔  database: database emulator started at http://localhost:9000
+[info] i  database: For testing set FIREBASE_DATABASE_EMULATOR_HOST=localhost:9000
+[debug] [2020-05-11T15:53:35.709Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/my-market-manager/webApps/-/config  
+ 
+[debug] [2020-05-11T15:53:36.328Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 11 May 2020 15:53:36 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting: Serving hosting files from: build
+[info] ✔  hosting: Local server: http://localhost:5000
+[info] ✔  hosting: hosting emulator started at http://localhost:5000
+[debug] [2020-05-11T15:53:36.643Z] Ignoring unsupported arg: projectId
+[debug] [2020-05-11T15:53:36.643Z] Ignoring unsupported arg: auto_download
+[debug] [2020-05-11T15:53:36.643Z] Starting pubsub emulator with command {"binary":"/Users/simongutierrez/.cache/firebase/emulators/pubsub-emulator-0.1.0/pubsub-emulator/bin/cloud-pubsub-emulator","args":["--host=localhost","--port=8085"],"optionalArgs":["port","host"],"joinArgs":true}
+[info] i  pubsub: pubsub emulator logging to pubsub-debug.log
+[debug] [2020-05-11T15:53:36.859Z] This is the Google Pub/Sub fake.
+
+[debug] [2020-05-11T15:53:36.860Z] Implementation may be incomplete or differ from the real system.
+
+[debug] [2020-05-11T15:53:36.920Z] May 11, 2020 11:53:36 AM com.google.cloud.pubsub.testing.v1.Main main
+INFO: IAM integration is disabled. IAM policy methods and ACL checks are not supported
+
+[debug] [2020-05-11T15:53:37.623Z] May 11, 2020 11:53:37 AM io.gapi.emulators.netty.NettyUtil applyJava7LongHostnameWorkaround
+INFO: Unable to apply Java 7 long hostname workaround.
+
+[debug] [2020-05-11T15:53:37.756Z] May 11, 2020 11:53:37 AM com.google.cloud.pubsub.testing.v1.Main main
+INFO: Server started, listening on 8085
+
+[info] ✔  pubsub: pubsub emulator started at http://localhost:8085
+[info] i  functions: Watching "/Users/simongutierrez/Projects/TTP-Phase II/My-Market-Manager/functions" for Cloud Functions...
+[debug] [2020-05-11T15:53:37.936Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-05-11T15:53:37.937Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
+[debug] [2020-05-11T15:53:37.937Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-05-11T15:53:37.938Z] [worker-~diagnostic~-646df170-d3a7-47aa-be15-37e4d438ca81]: Assigning socketPath: /var/folders/fb/h93m1hc144g9b2gpcn4p5j700000gn/T/fire_emu_22851.sock 
+[debug] [2020-05-11T15:53:37.939Z] [worker-~diagnostic~-646df170-d3a7-47aa-be15-37e4d438ca81]: BUSY 
+[debug] [2020-05-11T15:53:38.172Z] May 11, 2020 11:53:38 AM io.gapi.emulators.grpc.GrpcServer$3 operationComplete
+INFO: Adding handler(s) to newly registered Channel.
+
+[debug] [2020-05-11T15:53:38.474Z] [runtime-status] [22851] Functions runtime initialized. {"cwd":"/Users/simongutierrez/Projects/TTP-Phase II/My-Market-Manager/functions","node_version":"10.16.2"} 
+[debug] [2020-05-11T15:53:38.475Z] [runtime-status] [22851] Disabled runtime features: undefined 
+[debug] [2020-05-11T15:53:38.479Z] [runtime-status] [22851] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.2.0","resolution":"/Users/simongutierrez/Projects/TTP-Phase II/My-Market-Manager/functions/node_modules/firebase-admin/lib/index.js"} 
+[warn] ⚠  The Cloud Functions emulator requires the module "firebase-admin" to be version >8.9.0 so your version is too old. You can probably fix this by running "npm install firebase-admin@latest" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2020-05-11T15:53:38.504Z] [worker-~diagnostic~-646df170-d3a7-47aa-be15-37e4d438ca81]: exited 
+[debug] [2020-05-11T15:53:38.505Z] [worker-~diagnostic~-646df170-d3a7-47aa-be15-37e4d438ca81]: FINISHED 
+[debug] [2020-05-11T15:57:15.515Z] May 11, 2020 11:57:15 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+
+[debug] [2020-05-11T15:57:17.478Z] May 11, 2020 11:57:17 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+
+[debug] [2020-05-11T15:57:17.511Z] May 11, 2020 11:57:17 AM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T15:57:17.527Z] May 11, 2020 11:57:17 AM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T15:58:19.418Z] May 11, 2020 11:58:19 AM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T15:58:19.426Z] May 11, 2020 11:58:19 AM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T15:58:29.947Z] May 11, 2020 11:58:29 AM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T15:58:29.958Z] May 11, 2020 11:58:29 AM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T16:01:18.282Z] May 11, 2020 12:01:18 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T16:01:18.291Z] May 11, 2020 12:01:18 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+

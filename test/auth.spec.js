@@ -1,11 +1,7 @@
 import { expect } from 'chai';
 import * as firebase from '@firebase/testing';
-import fs from 'fs';
 import regeneratorRuntime from "regenerator-runtime";
-const rules = fs.readFileSync("database.rules.json", "utf8");
 
-const databaseName = "database-emulator-example";
-const test = () => 'This is a test';
 
 function getAuthedApp() {
   const app  = firebase.initializeTestApp({
