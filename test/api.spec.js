@@ -11,7 +11,7 @@ describe('Get API', () => {
         expect(typeof data).to.equal('object');  
     });
 
-    it('should return an the correct data searched for', async () => {
+    it('should return the correct data searched for', async () => {
         const stock = "aapl";
         const { data } = await axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${stock}&outputsize=full&apikey=${alphaApiToken}`);
         const date = data["Meta Data"]["3. Last Refreshed"];
