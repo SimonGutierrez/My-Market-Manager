@@ -48,6 +48,6 @@ service cloud.firestore {
 ### Setting Up Testing Environment:
 
 - First start your firestore emulator: `firebase emulators:start --only firestore`
-- Then run `npm test`.
+- Then `npm test` to run tests.
 
 Deploy Link: https://my-market-manager.web.app/signin
