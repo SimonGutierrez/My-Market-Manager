@@ -8,7 +8,9 @@ function getAuthedApp() {
     projectId: "My_Test_App",
     auth: { uid: "alice" }
   })
+
   const firestore = app.firestore();
+
 
   return firestore;
 }
@@ -35,11 +37,11 @@ function getAdminApp() {
   });
 
 describe('sign up', () => {
-    it('does not allow a user sign in if they do not have an account', async () => {
+    it('does not allow a user sign-in if they do not have an account', async () => {
       const db = getAuthedApp();
       const users = db.collection('users');
       const test = users.doc('John');
-      
+
       await firebase.assertFails(test.get());
     });
   })

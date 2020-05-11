@@ -359,3 +359,419 @@ INFO: operation failed: Invalid app id
 [debug] [2020-05-11T16:01:18.291Z] May 11, 2020 12:01:18 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
 INFO: operation failed: Invalid app id
 
+[debug] [2020-05-11T16:09:58.921Z] May 11, 2020 12:09:58 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T16:09:58.954Z] May 11, 2020 12:09:58 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T16:15:16.940Z] May 11, 2020 12:15:16 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T16:15:16.945Z] May 11, 2020 12:15:16 PM io.grpc.internal.SerializingExecutor run
+SEVERE: Exception while executing runnable io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable@1cb92b2a
+java.lang.NullPointerException
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.ForwardingServerCallListener.onMessage(ForwardingServerCallListener.java:33)
+	at io.grpc.Contexts$ContextualizedServerCallListener.onMessage(Contexts.java:76)
+	at io.grpc.ForwardingServerCallListener.onMessage(ForwardingServerCallListener.java:33)
+	at io.grpc.Contexts$ContextualizedServerCallListener.onMessage(Contexts.java:76)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:783)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+[debug] [2020-05-11T16:15:16.949Z] May 11, 2020 12:15:16 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T16:15:18.102Z] May 11, 2020 12:15:18 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T16:19:25.031Z] May 11, 2020 12:19:25 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T16:19:25.042Z] May 11, 2020 12:19:25 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T16:20:27.456Z] May 11, 2020 12:20:27 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T16:20:27.521Z] May 11, 2020 12:20:27 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T16:24:13.023Z] May 11, 2020 12:24:13 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T16:24:13.037Z] May 11, 2020 12:24:13 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T16:24:40.122Z] May 11, 2020 12:24:40 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T16:24:40.131Z] May 11, 2020 12:24:40 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T16:43:47.838Z] May 11, 2020 12:43:47 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T16:43:47.847Z] May 11, 2020 12:43:47 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T16:43:47.853Z] May 11, 2020 12:43:47 PM io.grpc.internal.SerializingExecutor run
+SEVERE: Exception while executing runnable io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable@7fb9c260
+java.lang.NullPointerException
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.ForwardingServerCallListener.onMessage(ForwardingServerCallListener.java:33)
+	at io.grpc.Contexts$ContextualizedServerCallListener.onMessage(Contexts.java:76)
+	at io.grpc.ForwardingServerCallListener.onMessage(ForwardingServerCallListener.java:33)
+	at io.grpc.Contexts$ContextualizedServerCallListener.onMessage(Contexts.java:76)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:783)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+[debug] [2020-05-11T16:44:05.034Z] May 11, 2020 12:44:05 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T16:44:05.040Z] May 11, 2020 12:44:05 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T16:44:05.164Z] May 11, 2020 12:44:05 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T16:44:05.216Z] May 11, 2020 12:44:05 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T16:45:27.513Z] May 11, 2020 12:45:27 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T16:45:27.522Z] May 11, 2020 12:45:27 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T16:45:27.630Z] May 11, 2020 12:45:27 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T16:45:27.672Z] May 11, 2020 12:45:27 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T16:59:31.982Z] May 11, 2020 12:59:31 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T16:59:31.991Z] May 11, 2020 12:59:31 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T16:59:32.915Z] May 11, 2020 12:59:32 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T16:59:34.077Z] May 11, 2020 12:59:34 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T16:59:34.097Z] May 11, 2020 12:59:34 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T17:00:24.837Z] May 11, 2020 1:00:24 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T17:00:24.869Z] May 11, 2020 1:00:24 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T17:00:24.944Z] May 11, 2020 1:00:24 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T17:00:24.950Z] May 11, 2020 1:00:24 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T17:04:36.610Z] May 11, 2020 1:04:36 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T17:04:36.621Z] May 11, 2020 1:04:36 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T17:04:36.738Z] May 11, 2020 1:04:36 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T17:04:36.744Z] May 11, 2020 1:04:36 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T17:39:29.590Z] May 11, 2020 1:39:29 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T17:40:41.967Z] May 11, 2020 1:40:41 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T17:40:41.974Z] May 11, 2020 1:40:41 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T17:40:42.047Z] May 11, 2020 1:40:42 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T17:40:42.054Z] May 11, 2020 1:40:42 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T17:42:29.234Z] May 11, 2020 1:42:29 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T17:42:29.240Z] May 11, 2020 1:42:29 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T17:48:42.821Z] May 11, 2020 1:48:42 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T17:48:42.831Z] May 11, 2020 1:48:42 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T17:50:07.972Z] ----------------------------------------------------------------------
+[debug] [2020-05-11T17:50:07.974Z] Command:       /usr/local/bin/node /usr/local/bin/firebase emulators:start
+[debug] [2020-05-11T17:50:07.975Z] CLI Version:   8.2.0
+[debug] [2020-05-11T17:50:07.975Z] Platform:      darwin
+[debug] [2020-05-11T17:50:07.975Z] Node Version:  v10.16.2
+[debug] [2020-05-11T17:50:07.976Z] Time:          Mon May 11 2020 13:50:07 GMT-0400 (Eastern Daylight Time)
+[debug] [2020-05-11T17:50:07.976Z] ----------------------------------------------------------------------
+[debug] [2020-05-11T17:50:07.976Z] 
+[debug] [2020-05-11T17:50:07.998Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-11T17:50:07.998Z] > authorizing via signed-in user
+[info] i  emulators: Starting emulators: functions, firestore, database, hosting, pubsub
+[warn] ⚠  emulators: It seems that you are running multiple instances of the emulator suite for project my-market-manager. This may result in unexpected behavior.
+[debug] [2020-05-11T17:50:08.084Z] [hub] writing locator at /var/folders/fb/h93m1hc144g9b2gpcn4p5j700000gn/T/hub-my-market-manager.json
+[info] ✔  hub: emulator hub started at http://localhost:4400
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "10"
+[info] ✔  functions: functions emulator started at http://localhost:5001
+[debug] [2020-05-11T17:50:08.396Z] Ignoring unsupported arg: projectId
+[debug] [2020-05-11T17:50:08.397Z] Ignoring unsupported arg: auto_download
+[debug] [2020-05-11T17:50:08.397Z] Starting firestore emulator with command {"binary":"java","args":["-Duser.language=en","-jar","/Users/simongutierrez/.cache/firebase/emulators/cloud-firestore-emulator-v1.11.3.jar","--host","localhost","--port",8080,"--rules","/Users/simongutierrez/Projects/TTP-Phase II/My-Market-Manager/firestore.rules","--functions_emulator","localhost:5001"],"optionalArgs":["port","webchannel_port","host","rules","functions_emulator","seed_from_export"],"joinArgs":false}
+[info] i  firestore: firestore emulator logging to firestore-debug.log
+[debug] [2020-05-11T17:50:09.921Z] API endpoint: http://
+[debug] [2020-05-11T17:50:09.922Z] localhost:8080
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=localhost:8080
+
+Dev App Server is now running.
+
+
+[info] ✔  firestore: firestore emulator started at http://localhost:8080
+[info] i  firestore: For testing set FIRESTORE_EMULATOR_HOST=localhost:8080
+[debug] [2020-05-11T17:50:09.938Z] Ignoring unsupported arg: projectId
+[debug] [2020-05-11T17:50:09.938Z] Ignoring unsupported arg: auto_download
+[debug] [2020-05-11T17:50:09.938Z] Ignoring unsupported arg: rules
+[debug] [2020-05-11T17:50:09.938Z] Starting database emulator with command {"binary":"java","args":["-Duser.language=en","-jar","/Users/simongutierrez/.cache/firebase/emulators/firebase-database-emulator-v4.4.1.jar","--host","localhost","--port",9000,"--functions_emulator_host","localhost","--functions_emulator_port",5001],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host"],"joinArgs":false}
+[info] i  database: database emulator logging to database-debug.log
+[debug] [2020-05-11T17:50:10.773Z] WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by io.netty.util.internal.ReflectionUtil (file:/Users/simongutierrez/.cache/firebase/emulators/firebase-database-emulator-v4.4.1.jar) to field sun.nio.ch.SelectorImpl.selectedKeys
+WARNING: Please consider reporting this to the maintainers of io.netty.util.internal.ReflectionUtil
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+
+[debug] [2020-05-11T17:50:11.758Z] 13:50:11.757 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+
+[debug] [2020-05-11T17:50:12.001Z] 13:50:12.001 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9000
+
+[info] ✔  database: database emulator started at http://localhost:9000
+[info] i  database: For testing set FIREBASE_DATABASE_EMULATOR_HOST=localhost:9000
+[debug] [2020-05-11T17:50:12.249Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-05-11T17:50:12.249Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-05-11T17:50:12.572Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 11 May 2020 17:50:12 GMT","server":"scaffolding on HTTPServer2","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-11T17:50:12.591Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/my-market-manager/webApps/-/config  
+ 
+[debug] [2020-05-11T17:50:13.348Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 11 May 2020 17:50:13 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting: Serving hosting files from: build
+[info] ✔  hosting: Local server: http://localhost:5000
+[info] ✔  hosting: hosting emulator started at http://localhost:5000
+[debug] [2020-05-11T17:50:13.662Z] Ignoring unsupported arg: projectId
+[debug] [2020-05-11T17:50:13.662Z] Ignoring unsupported arg: auto_download
+[debug] [2020-05-11T17:50:13.662Z] Starting pubsub emulator with command {"binary":"/Users/simongutierrez/.cache/firebase/emulators/pubsub-emulator-0.1.0/pubsub-emulator/bin/cloud-pubsub-emulator","args":["--host=localhost","--port=8085"],"optionalArgs":["port","host"],"joinArgs":true}
+[info] i  pubsub: pubsub emulator logging to pubsub-debug.log
+[debug] [2020-05-11T17:50:13.887Z] This is the Google Pub/Sub fake.
+
+[debug] [2020-05-11T17:50:13.887Z] Implementation may be incomplete or differ from the real system.
+
+[debug] [2020-05-11T17:50:13.944Z] May 11, 2020 1:50:13 PM com.google.cloud.pubsub.testing.v1.Main main
+INFO: IAM integration is disabled. IAM policy methods and ACL checks are not supported
+
+[debug] [2020-05-11T17:50:14.640Z] May 11, 2020 1:50:14 PM io.gapi.emulators.netty.NettyUtil applyJava7LongHostnameWorkaround
+INFO: Unable to apply Java 7 long hostname workaround.
+
+[debug] [2020-05-11T17:50:14.790Z] May 11, 2020 1:50:14 PM com.google.cloud.pubsub.testing.v1.Main main
+INFO: Server started, listening on 8085
+
+[info] ✔  pubsub: pubsub emulator started at http://localhost:8085
+[info] i  functions: Watching "/Users/simongutierrez/Projects/TTP-Phase II/My-Market-Manager/functions" for Cloud Functions...
+[debug] [2020-05-11T17:50:14.958Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-05-11T17:50:14.959Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
+[debug] [2020-05-11T17:50:14.959Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-05-11T17:50:14.960Z] [worker-~diagnostic~-764833aa-61f5-41e7-b15a-b21a6097fd56]: Assigning socketPath: /var/folders/fb/h93m1hc144g9b2gpcn4p5j700000gn/T/fire_emu_24583.sock 
+[debug] [2020-05-11T17:50:14.960Z] [worker-~diagnostic~-764833aa-61f5-41e7-b15a-b21a6097fd56]: BUSY 
+[debug] [2020-05-11T17:50:15.159Z] May 11, 2020 1:50:15 PM io.gapi.emulators.grpc.GrpcServer$3 operationComplete
+INFO: Adding handler(s) to newly registered Channel.
+
+[debug] [2020-05-11T17:50:15.531Z] [runtime-status] [24583] Functions runtime initialized. {"cwd":"/Users/simongutierrez/Projects/TTP-Phase II/My-Market-Manager/functions","node_version":"10.16.2"} 
+[debug] [2020-05-11T17:50:15.534Z] [runtime-status] [24583] Disabled runtime features: undefined 
+[debug] [2020-05-11T17:50:15.539Z] [runtime-status] [24583] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.2.0","resolution":"/Users/simongutierrez/Projects/TTP-Phase II/My-Market-Manager/functions/node_modules/firebase-admin/lib/index.js"} 
+[warn] ⚠  The Cloud Functions emulator requires the module "firebase-admin" to be version >8.9.0 so your version is too old. You can probably fix this by running "npm install firebase-admin@latest" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2020-05-11T17:50:15.558Z] [worker-~diagnostic~-764833aa-61f5-41e7-b15a-b21a6097fd56]: exited 
+[debug] [2020-05-11T17:50:15.558Z] [worker-~diagnostic~-764833aa-61f5-41e7-b15a-b21a6097fd56]: FINISHED 
+[debug] [2020-05-11T18:10:41.494Z] May 11, 2020 2:10:41 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+
+[debug] [2020-05-11T18:10:43.858Z] May 11, 2020 2:10:43 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+
+[debug] [2020-05-11T18:10:43.885Z] May 11, 2020 2:10:43 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T18:10:43.901Z] May 11, 2020 2:10:43 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T18:24:35.705Z] May 11, 2020 2:24:35 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T18:24:35.719Z] May 11, 2020 2:24:35 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T18:31:33.054Z] May 11, 2020 2:31:33 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T18:31:33.061Z] May 11, 2020 2:31:33 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T18:31:34.229Z] May 11, 2020 2:31:34 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T18:32:38.742Z] May 11, 2020 2:32:38 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T18:32:38.752Z] May 11, 2020 2:32:38 PM io.grpc.internal.SerializingExecutor run
+SEVERE: Exception while executing runnable io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable@66b5fe90
+java.lang.NullPointerException
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.ForwardingServerCallListener.onMessage(ForwardingServerCallListener.java:33)
+	at io.grpc.Contexts$ContextualizedServerCallListener.onMessage(Contexts.java:76)
+	at io.grpc.ForwardingServerCallListener.onMessage(ForwardingServerCallListener.java:33)
+	at io.grpc.Contexts$ContextualizedServerCallListener.onMessage(Contexts.java:76)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:783)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+[debug] [2020-05-11T18:32:38.790Z] May 11, 2020 2:32:38 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T18:33:01.953Z] May 11, 2020 2:33:01 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T18:33:01.961Z] May 11, 2020 2:33:01 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T19:55:16.356Z] May 11, 2020 3:55:16 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+
+[debug] [2020-05-11T19:55:16.608Z] May 11, 2020 3:55:16 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+
+[debug] [2020-05-11T19:55:16.618Z] May 11, 2020 3:55:16 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T19:55:16.643Z] May 11, 2020 3:55:16 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T19:59:54.368Z] May 11, 2020 3:59:54 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T19:59:54.378Z] May 11, 2020 3:59:54 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T20:00:41.446Z] May 11, 2020 4:00:41 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T20:00:41.456Z] May 11, 2020 4:00:41 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T20:02:29.699Z] May 11, 2020 4:02:29 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+
+[debug] [2020-05-11T20:02:30.507Z] May 11, 2020 4:02:30 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+
+[debug] [2020-05-11T20:02:30.511Z] May 11, 2020 4:02:30 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T20:02:30.528Z] May 11, 2020 4:02:30 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T20:09:02.622Z] May 11, 2020 4:09:02 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T20:09:02.629Z] May 11, 2020 4:09:02 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T20:35:28.032Z] May 11, 2020 4:35:28 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T20:35:28.039Z] May 11, 2020 4:35:28 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T20:37:51.663Z] May 11, 2020 4:37:51 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T20:37:51.678Z] May 11, 2020 4:37:51 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T20:40:57.147Z] May 11, 2020 4:40:57 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T20:40:57.165Z] May 11, 2020 4:40:57 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T20:43:53.676Z] May 11, 2020 4:43:53 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T20:43:53.690Z] May 11, 2020 4:43:53 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T20:50:36.976Z] May 11, 2020 4:50:36 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T20:50:36.985Z] May 11, 2020 4:50:36 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T20:51:13.781Z] May 11, 2020 4:51:13 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T20:51:13.788Z] May 11, 2020 4:51:13 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T20:51:45.095Z] May 11, 2020 4:51:45 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T20:51:45.101Z] May 11, 2020 4:51:45 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T21:01:17.186Z] May 11, 2020 5:01:17 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T21:01:17.196Z] May 11, 2020 5:01:17 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T21:01:33.890Z] May 11, 2020 5:01:33 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T21:01:33.900Z] May 11, 2020 5:01:33 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
