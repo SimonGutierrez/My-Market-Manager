@@ -26,12 +26,12 @@ function getAdminApp() {
   return firestore;
 }
 
-  // beforeEach(async () => {
-  //   // Clear the database between tests
-  //   await getAdminApp()
-  //     .ref()
-  //     .set(null);
-  // });
+  beforeEach(async () => {
+    // Clear the database between tests
+  await firebase.clearFirestoreData({
+    projectId: "my-test-project"
+   });
+  });
 
   after(async () => {
     // Close any open apps
@@ -39,8 +39,11 @@ function getAdminApp() {
   });
 
 describe('sign up', () => {
-
-    it('requires an email', () => {
-      expect(test()).to.equal('This is a test');
-    })
+    it('does not allow a user sign in if they do not have an account', async () => {
+      const db = getAuthedApp();
+      const users = db.collection('users');
+      const test = users.doc('John');
+      
+      await firebase.assertFails(test.get());
+    });
   })

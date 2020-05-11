@@ -45,4 +45,9 @@ service cloud.firestore {
 - Create a secrets file to import your API key and fireStore Config info.
 - `npm run start` will run in a dev environment.
 
+### Setting Up Testing Environment:
+
+- First start your firestore emulator: `firebase emulators:start --only firestore`
+- Then run `npm test`.
+
 Deploy Link: https://my-market-manager.web.app/signin
