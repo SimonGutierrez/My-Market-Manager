@@ -5,11 +5,6 @@ import regeneratorRuntime from "regenerator-runtime";
 
 
 describe('Get API', () => {
-    it('should return an object', async () => {
-        const { data } = await axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=aapl&outputsize=full&apikey=${alphaApiToken}`);
-  
-        expect(typeof data).to.equal('object');  
-    });
 
     it('should return the correct data searched for', async () => {
         const stock = "aapl";

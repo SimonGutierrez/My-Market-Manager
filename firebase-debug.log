@@ -781,3 +781,158 @@ INFO: operation failed: Invalid app id
 [debug] [2020-05-11T21:06:13.139Z] May 11, 2020 5:06:13 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
 INFO: operation failed: Invalid app id
 
+[debug] [2020-05-11T21:36:13.254Z] May 11, 2020 5:36:13 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T21:36:13.260Z] May 11, 2020 5:36:13 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T21:39:59.759Z] May 11, 2020 5:39:59 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T21:39:59.767Z] May 11, 2020 5:39:59 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T22:01:49.375Z] May 11, 2020 6:01:49 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T22:01:49.382Z] May 11, 2020 6:01:49 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T22:16:31.498Z] May 11, 2020 6:16:31 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+
+[debug] [2020-05-11T22:16:35.052Z] May 11, 2020 6:16:35 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+
+[debug] [2020-05-11T22:16:35.056Z] May 11, 2020 6:16:35 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T22:16:35.066Z] May 11, 2020 6:16:35 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T22:16:35.159Z] May 11, 2020 6:16:35 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T22:16:35.169Z] May 11, 2020 6:16:35 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-11T22:16:36.475Z] May 11, 2020 6:16:36 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-12T19:41:07.878Z] May 12, 2020 3:41:07 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-12T19:41:07.898Z] May 12, 2020 3:41:07 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-12T19:41:41.967Z] ----------------------------------------------------------------------
+[debug] [2020-05-12T19:41:41.969Z] Command:       /usr/local/bin/node /usr/local/bin/firebase emulators:start
+[debug] [2020-05-12T19:41:41.970Z] CLI Version:   8.2.0
+[debug] [2020-05-12T19:41:41.970Z] Platform:      darwin
+[debug] [2020-05-12T19:41:41.970Z] Node Version:  v10.16.2
+[debug] [2020-05-12T19:41:41.975Z] Time:          Tue May 12 2020 15:41:41 GMT-0400 (Eastern Daylight Time)
+[debug] [2020-05-12T19:41:41.975Z] ----------------------------------------------------------------------
+[debug] [2020-05-12T19:41:41.980Z] 
+[debug] [2020-05-12T19:41:42.002Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-12T19:41:42.003Z] > authorizing via signed-in user
+[info] i  emulators: Starting emulators: functions, firestore, database, hosting, pubsub
+[warn] ⚠  emulators: It seems that you are running multiple instances of the emulator suite for project my-market-manager. This may result in unexpected behavior.
+[debug] [2020-05-12T19:41:42.083Z] [hub] writing locator at /var/folders/fb/h93m1hc144g9b2gpcn4p5j700000gn/T/hub-my-market-manager.json
+[info] ✔  hub: emulator hub started at http://localhost:4400
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "10"
+[info] ✔  functions: functions emulator started at http://localhost:5001
+[debug] [2020-05-12T19:41:42.147Z] Ignoring unsupported arg: projectId
+[debug] [2020-05-12T19:41:42.148Z] Ignoring unsupported arg: auto_download
+[debug] [2020-05-12T19:41:42.148Z] Starting firestore emulator with command {"binary":"java","args":["-Duser.language=en","-jar","/Users/simongutierrez/.cache/firebase/emulators/cloud-firestore-emulator-v1.11.3.jar","--host","localhost","--port",8080,"--rules","/Users/simongutierrez/Projects/TTP-Phase II/My-Market-Manager/firestore.rules","--functions_emulator","localhost:5001"],"optionalArgs":["port","webchannel_port","host","rules","functions_emulator","seed_from_export"],"joinArgs":false}
+[info] i  firestore: firestore emulator logging to firestore-debug.log
+[debug] [2020-05-12T19:41:45.256Z] API endpoint: http://
+[debug] [2020-05-12T19:41:45.257Z] localhost:8080
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=localhost:8080
+
+Dev App Server is now running.
+
+
+[info] ✔  firestore: firestore emulator started at http://localhost:8080
+[info] i  firestore: For testing set FIRESTORE_EMULATOR_HOST=localhost:8080
+[debug] [2020-05-12T19:41:45.462Z] Ignoring unsupported arg: projectId
+[debug] [2020-05-12T19:41:45.462Z] Ignoring unsupported arg: auto_download
+[debug] [2020-05-12T19:41:45.462Z] Ignoring unsupported arg: rules
+[debug] [2020-05-12T19:41:45.462Z] Starting database emulator with command {"binary":"java","args":["-Duser.language=en","-jar","/Users/simongutierrez/.cache/firebase/emulators/firebase-database-emulator-v4.4.1.jar","--host","localhost","--port",9000,"--functions_emulator_host","localhost","--functions_emulator_port",5001],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host"],"joinArgs":false}
+[info] i  database: database emulator logging to database-debug.log
+[debug] [2020-05-12T19:41:46.800Z] WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by io.netty.util.internal.ReflectionUtil (file:/Users/simongutierrez/.cache/firebase/emulators/firebase-database-emulator-v4.4.1.jar) to field sun.nio.ch.SelectorImpl.selectedKeys
+WARNING: Please consider reporting this to the maintainers of io.netty.util.internal.ReflectionUtil
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+
+[debug] [2020-05-12T19:41:48.731Z] 15:41:48.727 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+
+[debug] [2020-05-12T19:41:49.241Z] 15:41:49.241 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9000
+
+[info] ✔  database: database emulator started at http://localhost:9000
+[info] i  database: For testing set FIREBASE_DATABASE_EMULATOR_HOST=localhost:9000
+[debug] [2020-05-12T19:41:49.557Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-05-12T19:41:49.558Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-05-12T19:41:49.741Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 12 May 2020 19:41:50 GMT","server":"scaffolding on HTTPServer2","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-12T19:41:49.759Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/my-market-manager/webApps/-/config  
+ 
+[debug] [2020-05-12T19:41:50.344Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 12 May 2020 19:41:50 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting: Serving hosting files from: build
+[info] ✔  hosting: Local server: http://localhost:5000
+[info] ✔  hosting: hosting emulator started at http://localhost:5000
+[debug] [2020-05-12T19:41:50.660Z] Ignoring unsupported arg: projectId
+[debug] [2020-05-12T19:41:50.661Z] Ignoring unsupported arg: auto_download
+[debug] [2020-05-12T19:41:50.661Z] Starting pubsub emulator with command {"binary":"/Users/simongutierrez/.cache/firebase/emulators/pubsub-emulator-0.1.0/pubsub-emulator/bin/cloud-pubsub-emulator","args":["--host=localhost","--port=8085"],"optionalArgs":["port","host"],"joinArgs":true}
+[info] i  pubsub: pubsub emulator logging to pubsub-debug.log
+[debug] [2020-05-12T19:41:50.897Z] This is the Google Pub/Sub fake.
+
+[debug] [2020-05-12T19:41:50.897Z] Implementation may be incomplete or differ from the real system.
+
+[debug] [2020-05-12T19:41:50.956Z] May 12, 2020 3:41:50 PM com.google.cloud.pubsub.testing.v1.Main main
+INFO: IAM integration is disabled. IAM policy methods and ACL checks are not supported
+
+[debug] [2020-05-12T19:41:52.348Z] May 12, 2020 3:41:52 PM io.gapi.emulators.netty.NettyUtil applyJava7LongHostnameWorkaround
+INFO: Unable to apply Java 7 long hostname workaround.
+
+[debug] [2020-05-12T19:41:52.561Z] May 12, 2020 3:41:52 PM com.google.cloud.pubsub.testing.v1.Main main
+INFO: Server started, listening on 8085
+
+[info] ✔  pubsub: pubsub emulator started at http://localhost:8085
+[info] i  functions: Watching "/Users/simongutierrez/Projects/TTP-Phase II/My-Market-Manager/functions" for Cloud Functions...
+[debug] [2020-05-12T19:41:52.705Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-05-12T19:41:52.706Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
+[debug] [2020-05-12T19:41:52.706Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-05-12T19:41:52.707Z] [worker-~diagnostic~-baddfe62-6bdd-4697-a3bb-23217834d03b]: Assigning socketPath: /var/folders/fb/h93m1hc144g9b2gpcn4p5j700000gn/T/fire_emu_28092.sock 
+[debug] [2020-05-12T19:41:52.708Z] [worker-~diagnostic~-baddfe62-6bdd-4697-a3bb-23217834d03b]: BUSY 
+[debug] [2020-05-12T19:41:52.991Z] May 12, 2020 3:41:52 PM io.gapi.emulators.grpc.GrpcServer$3 operationComplete
+INFO: Adding handler(s) to newly registered Channel.
+
+[debug] [2020-05-12T19:41:53.217Z] [runtime-status] [28092] Functions runtime initialized. {"cwd":"/Users/simongutierrez/Projects/TTP-Phase II/My-Market-Manager/functions","node_version":"10.16.2"} 
+[debug] [2020-05-12T19:41:53.219Z] [runtime-status] [28092] Disabled runtime features: undefined 
+[debug] [2020-05-12T19:41:53.226Z] [runtime-status] [28092] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.2.0","resolution":"/Users/simongutierrez/Projects/TTP-Phase II/My-Market-Manager/functions/node_modules/firebase-admin/lib/index.js"} 
+[warn] ⚠  The Cloud Functions emulator requires the module "firebase-admin" to be version >8.9.0 so your version is too old. You can probably fix this by running "npm install firebase-admin@latest" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2020-05-12T19:41:53.245Z] [worker-~diagnostic~-baddfe62-6bdd-4697-a3bb-23217834d03b]: exited 
+[debug] [2020-05-12T19:41:53.245Z] [worker-~diagnostic~-baddfe62-6bdd-4697-a3bb-23217834d03b]: FINISHED 
+[debug] [2020-05-12T19:42:08.775Z] May 12, 2020 3:42:08 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+
+[debug] [2020-05-12T19:42:14.017Z] May 12, 2020 3:42:14 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+
+[debug] [2020-05-12T19:42:14.054Z] May 12, 2020 3:42:14 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-12T19:42:14.072Z] May 12, 2020 3:42:14 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-12T19:46:42.791Z] May 12, 2020 3:46:42 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
+[debug] [2020-05-12T19:46:42.815Z] May 12, 2020 3:46:42 PM com.google.cloud.datastore.emulator.impl.util.WrappedStreamObserver onError
+INFO: operation failed: Invalid app id
+
