@@ -38,16 +38,20 @@ const initialState = [];
             const doc = portfolioRef.docs[i];
             const docData = doc.data();
 
-            //BUG: you can only make a call to the API every 12 secs, FIX: store time on local storage, if time on localstorage - Date.now() is greater than 12000 you can make the API call then save that data to our firestore as 'latestData' and save the time on local storage as Date.now(), otherwise retrieve the latest data from our fireStore and render that instead.
+            // BUG: you can only make a call to the API every 12 secs, FIX: store time on local storage, if time on localstorage - Date.now() is greater than 12000 you can make the API call then save that data to our firestore as 'latestData' and save the time on local storage as Date.now(), otherwise retrieve the latest data from our fireStore and render that instead. Or Find Better API.
 
-             const openingStockData = await axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${doc.id}&outputsize=full&apikey=${alphaApiToken}`);
+            // Make a call to stock API to get the stocks opening price 
+            const openingStockData = await axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${doc.id}&outputsize=full&apikey=${alphaApiToken}`);
 
-             const currentStockData = await axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${doc.id}&interval=5min&apikey=${alphaApiToken}`);
+            // Make a call to stock API to get the stocks current price
+            const currentStockData = await axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${doc.id}&interval=5min&apikey=${alphaApiToken}`);
 
+            // Parse retieved data from API call to get the stocks date
             let stockDate = currentStockData.data["Meta Data"]["3. Last Refreshed"];
-            
+            // calc current stock val by multiplying totalshares and current stocks price.
             let currentValue = docData.totalShares * currentStockData.data["Time Series (5min)"][stockDate]["1. open"];
 
+            // Update the usersportfolio with the new data
             usersPortfolio.push({
                 symbol: doc.id,
                 shares: docData.totalShares,
