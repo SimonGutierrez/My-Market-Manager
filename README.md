@@ -4,7 +4,7 @@
 
 # My-Market-Manager
 
-Welcome to My-Market-Manager a web app that allows users to buy stock and are visually able to see how they are doing in real time. Each user will have access to a portfolio to view stock progress and transactions for a full ledger of thier stock history. This app was made using react, redux, and firestore.
+Welcome to My-Market-Manager a web app that allows users to buy stock and visually represents how well they are doing in real time. Each user will have access to a portfolio to view stock progress and transactions for a full ledger of thier stock history. This app was made using react, redux, and firestore.
 
 ## How It Works
 
