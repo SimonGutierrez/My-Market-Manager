@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
@@ -7,9 +7,7 @@ import { compose } from 'redux';
 import WelcomeMessage from './WelcomeMessage';
 import Notifications from './Notifications';
 
-class Dashboard extends Component {
-  render() {
-    const { auth, notifications, profile } = this.props;
+function Dashboard({ auth, notifications, profile }) {
     if (!auth.uid) {
       return <Redirect to="/signin" />;
     } else {
@@ -27,7 +25,7 @@ class Dashboard extends Component {
         </div>
       );
     }
-  }
+  
 }
 
 const mapStateToProps = state => ({
