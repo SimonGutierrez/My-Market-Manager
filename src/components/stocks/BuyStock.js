@@ -38,7 +38,7 @@ class BuyStock extends Component {
         }
         
         const currBalance = this.props.profile.balance - stockBought.total;
-        console.log("stock>>>>:", stockBought)
+        
         return (
             <div className="section">
                 <div className="card z-depth-0">

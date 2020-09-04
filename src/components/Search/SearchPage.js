@@ -1,43 +1,29 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { searchThunkCreator } from '../../store/reducers/searchReducer';
 import BuyStock from '../stocks/BuyStock';
 
-class SearchPage extends Component {
-  constructor() {
-    super();
+function SearchPage ({foundStock, searchThunk}) {
+  const [ticker, setTicker] = useState('')
 
-    this.state = {
-      ticker: '',
-    };
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+  const handleChange = (event) => {
+    let newTicker = event.target.value;
+    setTicker(newTicker);
   }
 
-  handleChange(event) {
-    this.setState({
-      [event.target.id]: event.target.value,
-    });
-  }
-
-  handleSubmit(event) {
+  const handleSubmit = (event) => {
     event.preventDefault();
-    this.props.searchThunk(this.state.ticker);
-    this.setState({
-      ticker: '',
-    })
+    searchThunk(ticker);
+    setTicker('');
   }
 
-  render () {
-    const { foundStock } = this.props;
     const { searchResults } = foundStock;
 
     return (
       <div className="dashboard container">
         <div className="column">
           <div className="col s12 m6">
-            <form onSubmit={this.handleSubmit} className="card white">
+            <form onSubmit={handleSubmit} className="card white">
               <div className="card-content grey-text text-darken-3">
                 <span className="card-title">
                   <span className="bold-text-style">Find Your Company</span>
@@ -51,8 +37,8 @@ class SearchPage extends Component {
                   <input
                     type="text"
                     id='ticker'
-                    value={this.state.ticker}
-                    onChange={this.handleChange}
+                    value={ticker}
+                    onChange={handleChange}
                   />
                 </div>
               </div>
@@ -69,7 +55,6 @@ class SearchPage extends Component {
         </div>
       </div>
     );
-  }
 };
 
 const mapStateToProps = state => ({
