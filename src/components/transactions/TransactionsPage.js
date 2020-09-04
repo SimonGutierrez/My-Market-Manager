@@ -1,15 +1,13 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { getTransactionsThunkCreator } from '../../store/reducers/transactionsReducer';
 
-class TransactionsPage extends Component {
+function TransactionsPage ({auth, transactions, getTransactions}) {
 
-  componentDidMount() {
-    this.props.getTransactions(this.props.auth.uid)
-  }
+  useEffect(() => getTransactions(auth.uid), [auth.uid, getTransactions]);
 
-  renderTableData() {
-    return this.props.transactions.map((stock) => {
+  const renderTableData = () => {
+    return transactions.map((stock) => {
       const { 
         date,
         symbol, 
@@ -31,15 +29,13 @@ class TransactionsPage extends Component {
     })
   }
 
-  renderTableHeader() {
-    let header = Object.keys(this.props.transactions[0])
+  const renderTableHeader = () => {
+    let header = Object.keys(transactions[0])
     return header.map((key, index) => {
        return <th key={index}>{key.toUpperCase()}</th>
     })
  }
     
-    render () {
-      console.log("transactions", this.props.transactions)
       return (
         <div className="section">
           <div className="card z-depth-0">
@@ -47,15 +43,15 @@ class TransactionsPage extends Component {
               <h1 className='title'>Transactions</h1>
               <table className='transactions'>
                 <tbody>
-                  { this.props.transactions.length ?
-                    <tr>{this.renderTableHeader()}</tr> : 
+                  { transactions.length ?
+                    <tr>{renderTableHeader()}</tr> : 
                     <tr>
                       <th>No Transactions yet</th>
                       </tr>
                   }
                   {
-                    this.props.transactions.length ?
-                    this.renderTableData() :
+                    transactions.length ?
+                    renderTableData() :
                     <tr>
                       <td>Buy some Stock!</td>
                     </tr>
@@ -66,16 +62,16 @@ class TransactionsPage extends Component {
           </div>
         </div>
       );
-    };
   }
-  const mapStateToProps = state => ({
-    auth: state.firebase.auth,
-    transactions: state.transactions,
-  });
+
+const mapStateToProps = state => ({
+  auth: state.firebase.auth,
+  transactions: state.transactions,
+});
   
 const mapDispatchToProps = dispatch => ({
-    getTransactions(userId) {
-        dispatch(getTransactionsThunkCreator(userId));
+    getTransactions(userId) { 
+      dispatch(getTransactionsThunkCreator(userId))
     },
   });
   
