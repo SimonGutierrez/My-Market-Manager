@@ -1,28 +1,17 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { clearSearchThunkCreator } from '../../store/reducers/searchReducer';
 import { buyStockThunkCreator } from '../../store/reducers/stockReducer';
 import { connect } from 'react-redux';
 
-class BuyStock extends Component {
-    constructor() {
-        super()
+function BuyStock ({auth, profile, clearSearch, buyStock, searchResults}) {
+    const [amount, setAmount] = useState(1);
 
-        this.state = {
-            amount: 1,
-        };
-
-        this.handleChange = this.handleChange.bind(this);
-    }
-
-    handleChange(event) {
-        this.setState({
-          [event.target.id]: event.target.value,
-        });
+    const handleChange = (event) => {
+        const newAmount = event.target.value;
+        setAmount(newAmount);
       }
 
-    render() {
         const date = Date();
-        const {searchResults, auth} = this.props;
         let stockBought = {};
         
         if (searchResults["Meta Data"]) {
@@ -31,14 +20,14 @@ class BuyStock extends Component {
             stockBought = {
                 symbol: searchResults["Meta Data"]["2. Symbol"],
                 buyPrice: Number.parseFloat(Number(searchResults["Time Series (5min)"][stockDate]["1. open"])).toFixed(2),
-                numOfSharesBought: this.state.amount,
-                total: Number.parseFloat(this.state.amount * Number(searchResults["Time Series (5min)"][stockDate]["1. open"])).toFixed(2),
+                numOfSharesBought: amount,
+                total: Number.parseFloat(amount * Number(searchResults["Time Series (5min)"][stockDate]["1. open"])).toFixed(2),
                 date: date.toString(),
             }
         }
         
-        const currBalance = this.props.profile.balance - stockBought.total;
-        
+        const currBalance = profile.balance - stockBought.total;
+
         return (
             <div className="section">
                 <div className="card z-depth-0">
@@ -49,7 +38,7 @@ class BuyStock extends Component {
 
                         <ul className="placeholder">
                             <li>
-                            <span className="bold-text-style" >Your Wallet: ${Number.parseFloat(this.props.profile.balance).toFixed(2)}</span>
+                            <span className="bold-text-style" >Your Wallet: ${Number.parseFloat(profile.balance).toFixed(2)}</span>
                             </li>
 
                             <li>
@@ -64,9 +53,9 @@ class BuyStock extends Component {
                                 <input
                                 type="number"
                                 id="amount"
-                                value={this.state.amount}
+                                value={amount}
                                 min="1"
-                                onChange={this.handleChange}
+                                onChange={handleChange}
                                 />
                             </li>
                             
@@ -79,11 +68,9 @@ class BuyStock extends Component {
                             className="btn blue lighten-1 z-depth-0"
                             onClick={
                                 () => {
-                                    currBalance >= 0 ? this.props.buyStock(stockBought, auth.uid) : window.alert('Not enough funds!')
-                                    this.props.clearSearch()
-                                    this.setState({
-                                        amount: 1
-                                    })
+                                    currBalance >= 0 ? buyStock(stockBought, auth.uid) : window.alert('Not enough funds!')
+                                    clearSearch()
+                                    setAmount(1)
                             }}
                             >
                                 Buy
@@ -94,7 +81,6 @@ class BuyStock extends Component {
             </div>
         );
     };
-}
 
 const mapStateToProps = state => ({
     auth: state.firebase.auth,
