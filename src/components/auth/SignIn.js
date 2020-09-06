@@ -1,42 +1,33 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { signInThunkCreator } from '../../store/reducers/authReducer';
 
-export class SignIn extends Component {
-  constructor() {
-    super();
+export function SignIn ({signInThunk, auth}) {
+  const [user, setUser] = useState({
+    email: '',
+    password: '',
+  });
 
-    this.state = {
-      email: '',
-      password: '',
-    };
+  const handleChange = (event) => {
+    const target = event.target.id;
+    const value = event.target.value;
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    setUser({...user, [target]: value});
   }
 
-  handleChange(event) {
-    this.setState({
-      [event.target.id]: event.target.value,
-    });
-  }
-
-  handleSubmit(event) {
+  const handleSubmit = (event) => {
     event.preventDefault();
-    this.props.signInThunk(this.state);
+    signInThunk(user);
   }
-
-  render() {
-    const { auth } = this.props;
 
     if (auth.uid) {
       return <Redirect to="/" />;
     } else {
       return (
         <div className="container">
-          <form onSubmit={this.handleSubmit} className="card white">
+          <form onSubmit={handleSubmit} className="card white">
             <h5 className="grey-text text-darken-3">Sign In</h5>
 
             <div className="input-field">
@@ -49,7 +40,7 @@ export class SignIn extends Component {
                 id="email"
                 required
                 autoComplete="username"
-                onChange={this.handleChange}
+                onChange={handleChange}
               />
             </div>
 
@@ -63,7 +54,7 @@ export class SignIn extends Component {
                 id="password"
                 required
                 autoComplete="current-password"
-                onChange={this.handleChange}
+                onChange={handleChange}
               />
             </div>
 
@@ -75,12 +66,10 @@ export class SignIn extends Component {
         </div>
       );
     }
-  }
 }
 
 const mapStateToProps = state => ({
   auth: state.firebase.auth,
-  authError: state.auth.authError,
 });
 
 const mapDispatchToProps = dispatch => ({
