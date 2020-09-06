@@ -1,51 +1,35 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { signUpThunkCreator } from '../../store/reducers/authReducer';
 
-export class SignUp extends Component {
-  constructor() {
-    super();
-
-    this.state = {
+export function SignUp ({signUpThunk, auth}) {
+  const [newUser, setNewUser] = useState({
       email: '',
       password: '',
       firstName: '',
       lastName: '',
-    };
+  });
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+  const handleChange = (event) => {
+    const target = event.target.id;
+    const value = event.target.value;
+    setNewUser({...newUser, [target]: value});
   }
 
-  handleChange(event) {
-    // console.log('event.target.id: ', event.target.id);
-    // console.log('event.target.value: ', event.target.value);
-
-    this.setState({
-      [event.target.id]: event.target.value,
-    });
-  }
-
-  handleSubmit(event) {
-    // console.log('event.target.id: ', event.target.id);
-    // console.log('event.target.value: ', event.target.value);
-
+  const handleSubmit = (event) => {
     event.preventDefault();
-    this.props.signUpThunk(this.state);
+    signUpThunk(newUser);
  
   }
-
-  render() {
-    const { auth } = this.props;
 
     if (auth.uid) {
       return <Redirect to="/" />;
     } else {
       return (
         <div className="container">
-          <form onSubmit={this.handleSubmit} className="card white">
+          <form onSubmit={handleSubmit} className="card white">
             <h5 className="grey-text text-darken-3">Sign Up</h5>
 
             <div className="input-field">
@@ -61,7 +45,7 @@ export class SignUp extends Component {
                 autoComplete="username"
                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                 title="Example: cody@email.com"
-                onChange={this.handleChange}
+                onChange={handleChange}
               />
             </div>
 
@@ -79,7 +63,7 @@ export class SignUp extends Component {
                 autoComplete="current-password"
                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,32}"
                 title="May only contain one uppercase letter, one lowercase letter, one digit, and at least 8 characters in total"
-                onChange={this.handleChange}
+                onChange={handleChange}
               />
             </div>
 
@@ -96,7 +80,7 @@ export class SignUp extends Component {
                 required
                 pattern="[A-Za-z]{2,32}"
                 title="May only contain uppercase and lowercase letters only, and at least 2 characters in total"
-                onChange={this.handleChange}
+                onChange={handleChange}
               />
             </div>
 
@@ -113,7 +97,7 @@ export class SignUp extends Component {
                 required
                 pattern="[A-Za-z]{2,32}"
                 title="May only contain uppercase and lowercase letters only, and at least 2 characters in total"
-                onChange={this.handleChange}
+                onChange={handleChange}
               />
             </div>
 
@@ -123,12 +107,10 @@ export class SignUp extends Component {
         </div>
       );
     }
-  }
 }
 
 const mapStateToProps = state => ({
   auth: state.firebase.auth,
-  authError: state.auth.authError,
 });
 
 const mapDispatchToProps = dispatch => ({
