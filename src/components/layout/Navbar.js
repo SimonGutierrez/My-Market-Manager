@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 
@@ -7,33 +7,22 @@ import SignedInLinksBurger from './SignedInLinksBurger';
 import SignedOutLinks from './SignedOutLinks';
 import SignedOutLinksBurger from './SignedOutLinksBurger';
 
-class Navbar extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      width: 0,
-    };
-
-    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+function Navbar ({auth, profile}) {
+  const [width, updateWidth] = useState(0);
+  
+  const updateWindowDimensions = () => {
+    updateWidth(window.innerWidth);
   }
 
-  componentDidMount() {
-    this.updateWindowDimensions();
-    window.addEventListener('resize', this.updateWindowDimensions);
-  }
+  useEffect(() => {
+    updateWindowDimensions();
+    window.addEventListener('resize', updateWindowDimensions);
+    return () => {
+      window.removeEventListener('resize', updateWindowDimensions);
+    }
+  }, [])
 
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateWindowDimensions);
-  }
-
-  updateWindowDimensions() {
-    this.setState({ width: window.innerWidth });
-  }
-
-  render() {
-    const { auth, profile } = this.props;
-    const largeViewCheck = this.state.width > 1007;
+    const largeViewCheck = width > 1007;
     let curLinks;
 
     if (auth.uid) {
@@ -61,7 +50,6 @@ class Navbar extends Component {
         </nav>
       </div>
     );
-  }
 }
 
 const mapStateToProps = state => {
